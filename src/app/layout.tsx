@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
+import { cookies } from "next/headers";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import {
+  getPreviewAccessCookieName,
+  hasValidPreviewAccess,
+  isPreviewProtectionEnabled,
+} from "@/lib/preview-access";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,11 +25,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const requestHeaders = await headers();
-  const rewritePath = requestHeaders.get("x-matched-path");
-  const isHoldPage = rewritePath === "/under-construction";
-  const isPreviewLoginPage = rewritePath === "/preview-login";
-  const hideChrome = isHoldPage || isPreviewLoginPage;
+  const cookieStore = await cookies();
+  const previewToken = cookieStore.get(getPreviewAccessCookieName())?.value;
+  const hideChrome =
+    isPreviewProtectionEnabled() && !(await hasValidPreviewAccess(previewToken));
 
   return (
     <html lang="en">
