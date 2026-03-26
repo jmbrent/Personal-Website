@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --color-page: #f8f6f1;
+  --color-ink: #1f1a17;
+  --font-sans:
+    "Avenir Next", "Segoe UI", "Helvetica Neue", "Arial Nova", sans-serif;
+  --font-display:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+@theme inline {
+  --color-page: var(--color-page);
+  --color-ink: var(--color-ink);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(62, 93, 76, 0.22);
+}

@@ -1,0 +1,8 @@
+.next
+node_modules
+.vercel
+.DS_Store
+
+# Local agent/editor files
+AGENTS.md
+CLAUDE.md
