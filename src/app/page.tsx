@@ -1,97 +1,136 @@
+import { Suspense } from "react";
 import Link from "next/link";
 
-import { ProjectCard } from "@/components/project-card";
-import { SectionHeader } from "@/components/section-header";
 import { getProjects } from "@/lib/projects";
 
+const categoryOrder = [
+  "Project Management",
+  "Product / UX",
+  "Creative / Content",
+  "Film / Production",
+];
+
+const categoryStyles: Record<string, string> = {
+  "Project Management":
+    "bg-[linear-gradient(180deg,rgba(227,236,255,0.85),rgba(255,255,255,1))]",
+  "Product / UX":
+    "bg-[linear-gradient(180deg,rgba(246,241,210,0.8),rgba(255,255,255,1))]",
+  "Creative / Content":
+    "bg-[linear-gradient(180deg,rgba(255,229,223,0.72),rgba(255,255,255,1))]",
+  "Film / Production":
+    "bg-[linear-gradient(180deg,rgba(225,238,232,0.8),rgba(255,255,255,1))]",
+};
+
 export default function HomePage() {
-  const projects = getProjects().slice(0, 4);
+  const projects = getProjects();
+  const categorySummaries: Record<string, string> = {
+    "Project Management":
+      "Implementation, onboarding, systems, rollout, and cross-functional delivery.",
+    "Product / UX":
+      "Product design, UX research, dashboard structure, and interface clarity.",
+    "Creative / Content":
+      "Content systems, messaging, campaigns, video, and product storytelling.",
+    "Film / Production":
+      "Film, TV, and production work across producing, AD, camera, and editorial.",
+  };
+  const projectsByCategory = categoryOrder
+    .map((category) => ({
+      category,
+      projects: projects
+        .filter((project) => project.category === category)
+        .slice(0, 4),
+    }))
+    .filter((entry) => entry.projects.length > 0);
 
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-20 px-5 py-12 lg:px-8 lg:py-16">
-      <section className="grid gap-10 border-b border-black/10 pb-14 lg:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-stone-500">
-            Jonathan Brent
-          </p>
-          <h1 className="mt-5 max-w-4xl font-[family-name:var(--font-display)] text-5xl leading-[1.02] text-black sm:text-6xl">
-            Product, onboarding, and implementation work structured for fast scanning.
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-600">
-            I work well in early-stage environments where systems are still being
-            formed and product reality changes quickly. Most of this work comes
-            from Finliti and sits between project management, implementation,
-            product structure, onboarding, and cross-functional execution.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/project-management"
-              className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-stone-800"
-            >
-              Open project archive
-            </Link>
-            <Link
-              href="/resume"
-              className="rounded-full border border-black/15 px-6 py-3 text-sm font-medium text-stone-700 transition hover:border-black hover:text-black"
-            >
-              View resume
-            </Link>
+    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-5 pb-24 pt-3 lg:px-8 lg:pt-4">
+      <Suspense
+        fallback={
+          <div className="border border-black/10 bg-white p-6 text-stone-600">
+            Loading projects...
           </div>
-        </div>
-        <div className="grid gap-4">
-          {[
-            "Built onboarding systems, dashboard logic, and communication flows in a startup environment.",
-            "Translate messy evolving work into clearer structures, workflows, and user-facing systems.",
-            "Project pages are designed to double as resume-ready evidence, not just portfolio copy.",
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-[1.25rem] border border-black/10 bg-white p-5 text-base leading-7 text-stone-700"
+        }
+      >
+        <section className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+          {categoryOrder.map((category) => (
+            <Link
+              key={category}
+              href={
+                category === "Project Management"
+                  ? "/project-management"
+                  : category === "Product / UX"
+                    ? "/product-ux"
+                    : category === "Creative / Content"
+                      ? "/creative-content"
+                      : "/film-production"
+              }
+              className={`border border-black/10 px-4 py-3 text-sm text-black transition hover:border-black ${categoryStyles[category]}`}
             >
-              {item}
-            </div>
+              {category}
+            </Link>
           ))}
-        </div>
-      </section>
+        </section>
 
-      <section className="grid gap-8">
-        <SectionHeader
-          eyebrow="Featured Finliti Work"
-          title="Selected project entries"
-          description="The archive is designed to scroll cleanly. Start with the summary cards, then open the detail pages for context, ownership, outputs, and outcomes."
-        />
-        <div className="-mx-5 overflow-x-auto px-5 lg:mx-0 lg:px-0">
-          <div className="flex min-w-max gap-4 pb-2 lg:grid lg:min-w-0 lg:grid-cols-2">
-          {projects.map((project) => (
-              <div key={project.id} className="w-[22rem] lg:w-auto">
-                <ProjectCard project={project} />
+        <div className="grid gap-6">
+          {projectsByCategory.map((group) => (
+            <section
+              key={group.category}
+              className={`border border-black/10 p-5 ${categoryStyles[group.category]}`}
+            >
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <div>
+                  <h2 className="text-[1.8rem] font-semibold tracking-[-0.04em] text-black">
+                    {group.category}
+                  </h2>
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-stone-700">
+                    {categorySummaries[group.category]}
+                  </p>
+                </div>
+                <Link
+                  href={
+                    group.category === "Project Management"
+                      ? "/project-management"
+                      : group.category === "Product / UX"
+                        ? "/product-ux"
+                        : group.category === "Creative / Content"
+                          ? "/creative-content"
+                          : "/film-production"
+                  }
+                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+                >
+                  Open
+                </Link>
               </div>
+              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {group.projects.map((project) => (
+                  <Link
+                    key={project.id}
+                    href={`/work/${project.slug}`}
+                    className="group flex min-h-[13rem] flex-col justify-between border border-black/10 bg-white p-4 transition hover:border-black"
+                  >
+                    <div className="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
+                      <span>{project.projectType}</span>
+                      <span className="h-1 w-1 bg-stone-300" />
+                      <span>{project.company}</span>
+                    </div>
+                    <div className="mt-6">
+                      <h3 className="text-[1.45rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
+                        {project.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-6 text-stone-600">
+                        {project.oneLineSummary}
+                      </p>
+                    </div>
+                    <div className="mt-6 border-t border-black/10 pt-3 text-xs uppercase tracking-[0.14em] text-stone-500">
+                      {project.role}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
-          </div>
         </div>
-      </section>
-
-      <section className="grid gap-6 border-t border-black/10 pt-12 lg:grid-cols-3">
-        <div className="lg:col-span-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">
-            What this archive shows
-          </p>
-        </div>
-        <div className="lg:col-span-2 grid gap-4">
-          {[
-            "Implementation experience tied to actual onboarding, rollout, and systems work.",
-            "Cross-functional execution with founders and developers inside a growing startup.",
-            "Enough specificity to support short resume bullets with deeper proof behind them.",
-          ].map((item) => (
-            <p
-              key={item}
-              className="border-b border-black/8 pb-4 text-lg leading-8 text-stone-700"
-            >
-              {item}
-            </p>
-          ))}
-        </div>
-      </section>
+      </Suspense>
     </main>
   );
 }

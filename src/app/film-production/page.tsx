@@ -1,21 +1,23 @@
-import { PageShell } from "@/components/page-shell";
+import { CategoryArchive } from "@/components/category-archive";
+import { getProjects } from "@/lib/projects";
 
 export const metadata = {
-  title: "Film / Production",
+  title: "Film / TV",
 };
 
 export default function FilmProductionPage() {
+  const projects = getProjects().filter(
+    (project) => project.category === "Film / Production",
+  );
+
   return (
-    <PageShell
-      eyebrow="Film / Production"
-      title="Film and production background"
-      description="This section is a lighter placeholder for film and production work. It stays separate from the product archive, but it informs the same execution-oriented approach to coordination, timing, and delivery."
-      bullets={[
-        "Production planning and coordination",
-        "Execution under changing timelines and constraints",
-        "Team communication and delivery support",
-        "Operational discipline carried into startup product work",
-      ]}
+    <CategoryArchive
+      title="Film / TV"
+      description="Production, development, camera, editorial, and coordination work across independent film, television, and creator-led projects."
+      projects={projects}
+      accentClassName="bg-[linear-gradient(180deg,rgba(225,238,232,0.82),rgba(255,255,255,1))]"
+      linkHref="/"
+      linkLabel="All work"
     />
   );
 }

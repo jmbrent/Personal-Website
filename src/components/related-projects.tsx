@@ -20,7 +20,7 @@ export function RelatedProjects({ projects }: RelatedProjectsProps) {
         {projects.map((project) => (
           <Link
             key={project.id}
-            href={`/project-management/${project.slug}`}
+            href={`/work/${project.slug}`}
             className="rounded-[1rem] border border-black/10 bg-white p-5 transition hover:border-black"
           >
             <p className="text-xs uppercase tracking-[0.18em] text-stone-500">

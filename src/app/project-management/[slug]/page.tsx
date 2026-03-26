@@ -48,23 +48,23 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   );
 
   const sections = [
-    { id: "context", label: "Context" },
-    { id: "objective", label: "Objective" },
-    { id: "ownership", label: "What I Owned" },
-    { id: "deliverables", label: "Built / Changed" },
-    { id: "collaboration", label: "Collaboration" },
+    { id: "context", label: "Start" },
+    { id: "objective", label: "Goal" },
+    { id: "ownership", label: "Role" },
+    { id: "deliverables", label: "Scope" },
+    { id: "collaboration", label: "Team" },
     { id: "skills", label: "Skills" },
-    { id: "outcomes", label: "Outcome / Impact" },
-    { id: "resume", label: "Resume Versions" },
+    { id: "outcomes", label: "Outcome" },
+    { id: "resume", label: "Resume" },
   ];
 
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 py-12 lg:px-8 lg:py-16">
       <Link
-        href="/project-management"
-        className="inline-flex w-fit rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+        href="/"
+        className="inline-flex w-fit border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
       >
-        Back to project management
+        Back to work
       </Link>
 
       <ProjectDetailHeader project={project} />
@@ -81,16 +81,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
       <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
         <aside className="lg:sticky lg:top-28 lg:h-fit">
-          <div className="rounded-[1.25rem] border border-black/10 bg-white p-5">
+          <div className="border border-black/10 bg-white p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-              On this page
+              Project
             </p>
             <nav className="mt-4 flex flex-col gap-2">
               {sections.map((section) => (
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+                  className="border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
                 >
                   {section.label}
                 </a>
@@ -102,36 +102,36 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="grid gap-6">
           <section
             id="context"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <SectionHeader
-              eyebrow="Context"
-              title="Starting situation"
+              eyebrow="Start"
+              title="Start"
               description={project.context}
             />
           </section>
           <section
             id="objective"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <SectionHeader
-              eyebrow="Objective"
-              title="What the project needed to achieve"
+              eyebrow="Goal"
+              title="Goal"
               description={project.objective}
             />
           </section>
           <section
             id="ownership"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-              What I Owned
+              Role
             </p>
             <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
               {project.ownership.map((item) => (
                 <li
                   key={item}
-                  className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                  className="border border-black/10 bg-white px-4 py-3"
                 >
                   {item}
                 </li>
@@ -140,17 +140,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </section>
           <section
             id="deliverables"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-              What I Built / Changed
+              Scope
             </p>
             {project.deliverables.length ? (
               <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
                 {project.deliverables.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                <li
+                  key={item}
+                    className="border border-black/10 bg-white px-4 py-3"
                   >
                     {item}
                   </li>
@@ -158,23 +158,23 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </ul>
             ) : (
               <p className="mt-5 text-base leading-7 text-stone-600">
-                This project was more heavily centered on ownership, coordination,
-                and rollout support than on discrete build outputs.
+                This work centered more on coordination, ownership, and delivery
+                support than discrete build outputs.
               </p>
             )}
           </section>
           <section
             id="collaboration"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-              Collaboration
+              Team
             </p>
             <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
               {project.collaborators.map((item) => (
                 <li
                   key={item}
-                  className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                  className="border border-black/10 bg-white px-4 py-3"
                 >
                   {item}
                 </li>
@@ -183,7 +183,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </section>
           <section
             id="skills"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               Skills Used
@@ -197,17 +197,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </section>
           <section
             id="outcomes"
-            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+            className="scroll-mt-28 border border-black/10 bg-white p-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-              Outcome / Impact
+              Outcome
             </p>
             {project.outcomes.length ? (
               <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
                 {project.outcomes.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                <li
+                  key={item}
+                    className="border border-black/10 bg-white px-4 py-3"
                   >
                     {item}
                   </li>
@@ -215,14 +215,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </ul>
             ) : (
               <p className="mt-5 text-base leading-7 text-stone-600">
-                Outcome detail can be expanded further as this project archive grows.
+                Outcome detail can expand further as the archive grows.
               </p>
             )}
             <dl className="mt-6 grid gap-4 md:grid-cols-3">
               {project.metrics.map((metric) => (
                 <div
                   key={metric.label}
-                  className="rounded-2xl border border-black/10 bg-white px-4 py-4 text-black"
+                  className="border border-black/10 bg-white px-4 py-4 text-black"
                 >
                   <dt className="text-xs uppercase tracking-[0.16em] text-stone-500">
                     {metric.label}

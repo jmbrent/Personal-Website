@@ -19,7 +19,7 @@ export default async function PreviewLoginPage({
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 items-center px-5 py-16 lg:px-8">
-      <section className="w-full rounded-[2rem] border border-stone-200 bg-white p-8 shadow-[0_24px_60px_rgba(53,42,31,0.08)] sm:p-10">
+      <section className="w-full border border-stone-200 bg-white p-8 shadow-[0_24px_60px_rgba(53,42,31,0.08)] sm:p-10">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-stone-500">
           Private Preview
         </p>
@@ -31,13 +31,13 @@ export default async function PreviewLoginPage({
           launch.
         </p>
         {!isEnabled ? (
-          <p className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+          <p className="mt-6 border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
             `PREVIEW_PASSWORD` is not configured yet. Add it in Vercel project
             environment variables before using this page.
           </p>
         ) : null}
         {error ? (
-          <p className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          <p className="mt-6 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             Incorrect password.
           </p>
         ) : null}
@@ -49,7 +49,7 @@ export default async function PreviewLoginPage({
             <input
               type="password"
               name="password"
-              className="rounded-2xl border border-stone-300 bg-white px-4 py-3 text-base text-stone-900 outline-none transition focus:border-stone-900"
+              className="border border-stone-300 bg-white px-4 py-3 text-base text-stone-900 outline-none transition focus:border-stone-900"
               autoComplete="current-password"
               required
             />
@@ -57,7 +57,7 @@ export default async function PreviewLoginPage({
           <input type="hidden" name="redirectTo" value="/" />
           <button
             type="submit"
-            className="rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-400"
+            className="bg-stone-900 px-6 py-3 text-sm font-medium text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-400"
             disabled={!isEnabled}
           >
             Unlock preview

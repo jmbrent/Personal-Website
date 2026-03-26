@@ -1,21 +1,23 @@
-import { PageShell } from "@/components/page-shell";
+import { CategoryArchive } from "@/components/category-archive";
+import { getProjects } from "@/lib/projects";
 
 export const metadata = {
   title: "Product / UX",
 };
 
 export default function ProductUxPage() {
+  const projects = getProjects().filter(
+    (project) => project.category === "Product / UX",
+  );
+
   return (
-    <PageShell
-      eyebrow="Product / UX"
-      title="Product structure and feature clarity work"
-      description="Most of this work currently lives inside the Finliti project entries, especially around dashboard structure, information architecture, onboarding flow, and feature framing."
-      bullets={[
-        "Dashboard structure and feature organization across a growing advisor product",
-        "Information architecture for tools that expanded beyond simple reports",
-        "User-facing workflow clarity in onboarding, navigation, and delivery",
-        "Feature framing tied to actual implementation constraints",
-      ]}
+    <CategoryArchive
+      title="Product / UX"
+      description="Product design, research, onboarding flow, dashboard structure, and interface clarity across fintech, healthcare, and media."
+      projects={projects}
+      accentClassName="bg-[linear-gradient(180deg,rgba(246,241,210,0.82),rgba(255,255,255,1))]"
+      linkHref="/"
+      linkLabel="All work"
     />
   );
 }

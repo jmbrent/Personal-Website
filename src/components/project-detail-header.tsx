@@ -7,7 +7,7 @@ type ProjectDetailHeaderProps = {
 
 export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
   return (
-    <section className="rounded-[1.5rem] border border-black/10 bg-white p-8">
+    <section className="border border-black/10 bg-white p-8">
       <div className="flex flex-wrap items-start justify-between gap-6">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-stone-500">
@@ -20,7 +20,7 @@ export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
             {project.oneLineSummary}
           </p>
         </div>
-        <div className="rounded-[1rem] border border-black/10 bg-white px-5 py-4">
+        <div className="border border-black/10 bg-white px-5 py-4">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
             Status
           </p>
@@ -29,20 +29,14 @@ export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
           </p>
         </div>
       </div>
-      <dl className="mt-8 grid gap-5 md:grid-cols-4">
+      <dl className="mt-8 grid gap-5 md:grid-cols-5">
         <div>
           <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-            Client / Company
+            Role
           </dt>
           <dd className="mt-2 text-base leading-7 text-stone-900">
-            {project.client ? `${project.company} / ${project.client}` : project.company}
+            {project.role}
           </dd>
-        </div>
-        <div>
-          <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-            My Role
-          </dt>
-          <dd className="mt-2 text-base leading-7 text-stone-900">{project.role}</dd>
         </div>
         <div>
           <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
@@ -54,10 +48,26 @@ export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
         </div>
         <div>
           <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-            Location
+            Company
           </dt>
           <dd className="mt-2 text-base leading-7 text-stone-900">
-            {project.location ?? "Remote"}
+            {project.company}
+          </dd>
+        </div>
+        <div>
+          <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
+            Scope
+          </dt>
+          <dd className="mt-2 text-base leading-7 text-stone-900">
+            {project.scopeLevel}
+          </dd>
+        </div>
+        <div>
+          <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
+            Audience
+          </dt>
+          <dd className="mt-2 text-base leading-7 text-stone-900">
+            {project.audience}
           </dd>
         </div>
       </dl>

@@ -1,21 +1,23 @@
-import { PageShell } from "@/components/page-shell";
+import { CategoryArchive } from "@/components/category-archive";
+import { getProjects } from "@/lib/projects";
 
 export const metadata = {
   title: "Creative / Content",
 };
 
 export default function CreativeContentPage() {
+  const projects = getProjects().filter(
+    (project) => project.category === "Creative / Content",
+  );
+
   return (
-    <PageShell
-      eyebrow="Creative / Content"
-      title="Messaging systems, content strategy, and lifecycle communication"
-      description="This side of the work includes lifecycle emails, newsletters, survey framing, report language, and product-facing communication tied directly to adoption and retention."
-      bullets={[
-        "Lifecycle email systems and weekly market newsletters",
-        "Survey and report framing for behavioral finance products",
-        "Messaging aligned with onboarding, discovery, and retention",
-        "Content systems that support product operations rather than standalone campaigns",
-      ]}
+    <CategoryArchive
+      title="Creative / Content"
+      description="Messaging systems, lifecycle communication, branded content, campaigns, video editing, and motion-led product storytelling."
+      projects={projects}
+      accentClassName="bg-[linear-gradient(180deg,rgba(255,229,223,0.74),rgba(255,255,255,1))]"
+      linkHref="/"
+      linkLabel="All work"
     />
   );
 }

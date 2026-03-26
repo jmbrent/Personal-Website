@@ -1,7 +1,7 @@
 import { SectionHeader } from "@/components/section-header";
 
 export const metadata = {
-  title: "Contact",
+  title: "Start a Project",
 };
 
 const contactMethods = [
@@ -26,9 +26,9 @@ export default function ContactPage() {
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-5 py-12 lg:px-8 lg:py-16">
       <SectionHeader
-        eyebrow="Contact"
-        title="Direct contact and reference links"
-        description="Simple contact access. No form, no extra steps."
+        eyebrow="Start a Project"
+        title="Contact"
+        description="Direct contact and reference links."
       />
       <section className="grid gap-5 md:grid-cols-3">
         {contactMethods.map((item) => (

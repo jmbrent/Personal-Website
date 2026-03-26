@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { getProjectTimelineLabel } from "@/lib/projects";
 import { Project } from "@/types/projects";
-import { SkillsTagList } from "@/components/skills-tag-list";
 
 type ProjectCardProps = {
   project: Project;
@@ -15,20 +14,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
   );
 
   return (
-    <article className="group rounded-[1.25rem] border border-black/10 bg-white p-6 transition hover:border-black hover:bg-stone-50/40">
-      <div className="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
+    <article className="group flex h-full flex-col border-t border-black pt-5 transition">
+      <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
         <span>{project.projectType}</span>
         <span className="h-1 w-1 rounded-full bg-stone-300" />
         <span>{project.company}</span>
         <span className="h-1 w-1 rounded-full bg-stone-300" />
         <span>{timeline}</span>
       </div>
-      <div className="mt-5 flex flex-col gap-4">
+      <div className="mt-6 flex flex-1 flex-col gap-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight text-black">
+            <h2 className="text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
               <Link
-                href={`/project-management/${project.slug}`}
+                href={`/work/${project.slug}`}
                 className="transition group-hover:text-stone-700"
               >
                 {project.title}
@@ -39,17 +38,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <span className="rounded-full border border-black bg-black px-3 py-1 text-xs font-semibold text-white">
+            <span className="text-[11px] uppercase tracking-[0.14em] text-stone-500">
               {project.status}
             </span>
-            {project.featured ? (
-              <span className="rounded-full border border-black/10 bg-stone-100 px-3 py-1 text-xs font-semibold text-stone-700">
-                Featured
-              </span>
-            ) : null}
           </div>
         </div>
-        <dl className="grid gap-4 border-t border-black/8 pt-4 text-sm text-stone-700 md:grid-cols-4">
+        <dl className="grid gap-5 border-t border-black/10 pt-5 text-sm text-stone-700 md:grid-cols-2">
           <div>
             <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
               Role
@@ -58,24 +52,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
           <div>
             <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-              Industry
+              Timeline
             </dt>
-            <dd className="mt-1 leading-6">{project.industry}</dd>
+            <dd className="mt-1 leading-6">{timeline}</dd>
           </div>
           <div>
             <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-              Audience
+              Outcome
             </dt>
-            <dd className="mt-1 leading-6">{project.audience}</dd>
+            <dd className="mt-1 leading-6">{project.outcomes[0] ?? project.objective}</dd>
           </div>
           <div>
             <dt className="text-xs uppercase tracking-[0.18em] text-stone-500">
-              Scope
+              Company
             </dt>
-            <dd className="mt-1 leading-6">{project.scopeLevel}</dd>
+            <dd className="mt-1 leading-6">{project.company}</dd>
           </div>
         </dl>
-        <SkillsTagList items={project.skills} />
       </div>
     </article>
   );

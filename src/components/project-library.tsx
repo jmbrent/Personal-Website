@@ -4,29 +4,27 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { FilterBar } from "@/components/filter-bar";
 import { ProjectCard } from "@/components/project-card";
-import { getProjectYears } from "@/lib/projects";
 import { Project } from "@/types/projects";
 
 type ProjectLibraryProps = {
   projects: Project[];
+  defaultView?: "list" | "grid";
 };
 
-export function ProjectLibrary({ projects }: ProjectLibraryProps) {
+export function ProjectLibrary({
+  projects,
+  defaultView = "list",
+}: ProjectLibraryProps) {
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const search = searchParams.get("search") ?? "";
   const values = {
     projectType: searchParams.get("projectType") ?? "",
-    skill: searchParams.get("skill") ?? "",
-    year: searchParams.get("year") ?? "",
-    sort: searchParams.get("sort") ?? "featured",
+    view: searchParams.get("view") ?? defaultView,
   };
 
   const projectTypes = [...new Set(projects.map((project) => project.projectType))];
-  const skills = [...new Set(projects.flatMap((project) => project.skills))].sort();
-  const years = getProjectYears();
 
   const setParam = (key: string, value: string) => {
     const nextParams = new URLSearchParams(searchParams.toString());
@@ -43,55 +41,14 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
     });
   };
 
-  const reset = () => {
-    router.replace(pathname, { scroll: false });
-  };
-
   const visibleProjects = projects
     .filter((project) => {
-      const haystack = [
-        project.title,
-        project.oneLineSummary,
-        project.company,
-        project.role,
-        project.projectType,
-        project.context,
-        project.objective,
-        ...project.ownership,
-        ...project.deliverables,
-        ...project.skills,
-        ...project.outcomes,
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      const matchesSearch = !search || haystack.includes(search.toLowerCase());
       const matchesType =
         !values.projectType || project.projectType === values.projectType;
-      const matchesSkill =
-        !values.skill || project.skills.includes(values.skill);
-      const matchesYear =
-        !values.year ||
-        project.timelineStart.startsWith(values.year) ||
-        project.timelineEnd.startsWith(values.year);
 
-      return (
-        matchesSearch && matchesType && matchesSkill && matchesYear
-      );
+      return matchesType;
     })
     .sort((left, right) => {
-      if (values.sort === "title") {
-        return left.title.localeCompare(right.title);
-      }
-
-      if (values.sort === "oldest") {
-        return left.timelineStart.localeCompare(right.timelineStart);
-      }
-
-      if (values.sort === "newest") {
-        return right.timelineStart.localeCompare(left.timelineStart);
-      }
-
       if (left.featured !== right.featured) {
         return left.featured ? -1 : 1;
       }
@@ -100,32 +57,30 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
     });
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-10">
       <FilterBar
-        search={search}
         projectTypes={projectTypes}
-        skills={skills}
-        years={years}
         values={values}
         onChange={setParam}
-        onReset={reset}
       />
       <div className="flex items-center justify-between gap-4">
         <p className="text-sm uppercase tracking-[0.18em] text-stone-500">
           {visibleProjects.length} project{visibleProjects.length === 1 ? "" : "s"}
         </p>
-        <p className="max-w-xl text-sm text-stone-600">
-          Each entry is written to work both as a case study and as source
-          material for resume bullets.
-        </p>
       </div>
-      <div className="grid gap-5">
+      <div
+        className={
+          values.view === "grid"
+            ? "grid gap-10 lg:grid-cols-2"
+            : "grid gap-10"
+        }
+      >
         {visibleProjects.length ? (
           visibleProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))
         ) : (
-          <div className="rounded-[1.75rem] border border-dashed border-stone-300 bg-stone-100/70 p-8 text-center text-stone-600">
+          <div className="rounded-[1.25rem] border border-dashed border-stone-300 bg-white p-8 text-center text-stone-600">
             No projects match the current filters. Reset filters to view the full
             library.
           </div>

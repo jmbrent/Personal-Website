@@ -128,7 +128,7 @@ export default function ResumePage() {
                   return (
                     <Link
                       key={project.id}
-                      href={`/project-management/${project.slug}`}
+                      href={`/work/${project.slug}`}
                       className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
                     >
                       {project.title}
