@@ -8,13 +8,13 @@ export default function FilmProductionPage() {
   return (
     <PageShell
       eyebrow="Film / Production"
-      title="Production work, execution discipline, and creative operations"
-      description="This section gives the site room to capture production-facing work separately from product delivery, while keeping the same emphasis on ownership, coordination, and execution."
+      title="Film and production background"
+      description="This section is a lighter placeholder for film and production work. It stays separate from the product archive, but it informs the same execution-oriented approach to coordination, timing, and delivery."
       bullets={[
         "Production planning and coordination",
-        "Creative execution across constrained timelines",
+        "Execution under changing timelines and constraints",
         "Team communication and delivery support",
-        "Operational detail applied in high-variance environments",
+        "Operational discipline carried into startup product work",
       ]}
     />
   );

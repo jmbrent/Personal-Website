@@ -12,7 +12,7 @@ export function RelatedProjects({ projects }: RelatedProjectsProps) {
   }
 
   return (
-    <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+    <section className="rounded-[1.25rem] border border-black/10 bg-white p-6">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
         Related Projects
       </p>
@@ -21,7 +21,7 @@ export function RelatedProjects({ projects }: RelatedProjectsProps) {
           <Link
             key={project.id}
             href={`/project-management/${project.slug}`}
-            className="rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5 transition hover:border-stone-400 hover:bg-white"
+            className="rounded-[1rem] border border-black/10 bg-white p-5 transition hover:border-black"
           >
             <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
               {project.projectType}

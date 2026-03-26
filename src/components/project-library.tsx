@@ -16,20 +16,15 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const search = searchParams.get("search") ?? "";
   const values = {
     projectType: searchParams.get("projectType") ?? "",
-    company: searchParams.get("company") ?? "",
-    role: searchParams.get("role") ?? "",
     skill: searchParams.get("skill") ?? "",
     year: searchParams.get("year") ?? "",
     sort: searchParams.get("sort") ?? "featured",
   };
 
   const projectTypes = [...new Set(projects.map((project) => project.projectType))];
-  const companies = [
-    ...new Set(projects.map((project) => project.client ?? project.company)),
-  ];
-  const roles = [...new Set(projects.map((project) => project.role))];
   const skills = [...new Set(projects.flatMap((project) => project.skills))].sort();
   const years = getProjectYears();
 
@@ -54,13 +49,25 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
 
   const visibleProjects = projects
     .filter((project) => {
+      const haystack = [
+        project.title,
+        project.oneLineSummary,
+        project.company,
+        project.role,
+        project.projectType,
+        project.context,
+        project.objective,
+        ...project.ownership,
+        ...project.deliverables,
+        ...project.skills,
+        ...project.outcomes,
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      const matchesSearch = !search || haystack.includes(search.toLowerCase());
       const matchesType =
         !values.projectType || project.projectType === values.projectType;
-      const matchesCompany =
-        !values.company ||
-        project.company === values.company ||
-        project.client === values.company;
-      const matchesRole = !values.role || project.role === values.role;
       const matchesSkill =
         !values.skill || project.skills.includes(values.skill);
       const matchesYear =
@@ -69,7 +76,7 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
         project.timelineEnd.startsWith(values.year);
 
       return (
-        matchesType && matchesCompany && matchesRole && matchesSkill && matchesYear
+        matchesSearch && matchesType && matchesSkill && matchesYear
       );
     })
     .sort((left, right) => {
@@ -95,9 +102,8 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
   return (
     <div className="flex flex-col gap-8">
       <FilterBar
+        search={search}
         projectTypes={projectTypes}
-        companies={companies}
-        roles={roles}
         skills={skills}
         years={years}
         values={values}
@@ -109,8 +115,8 @@ export function ProjectLibrary({ projects }: ProjectLibraryProps) {
           {visibleProjects.length} project{visibleProjects.length === 1 ? "" : "s"}
         </p>
         <p className="max-w-xl text-sm text-stone-600">
-          Each entry is structured to work both as a case study and as source
-          material for short resume bullets.
+          Each entry is written to work both as a case study and as source
+          material for resume bullets.
         </p>
       </div>
       <div className="grid gap-5">

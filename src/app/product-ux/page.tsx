@@ -8,13 +8,13 @@ export default function ProductUxPage() {
   return (
     <PageShell
       eyebrow="Product / UX"
-      title="Product structure, feature clarity, and interface thinking"
-      description="This section is reserved for product and UX work that sits adjacent to the project management archive: dashboard organization, information architecture, user-facing flow decisions, and feature framing."
+      title="Product structure and feature clarity work"
+      description="Most of this work currently lives inside the Finliti project entries, especially around dashboard structure, information architecture, onboarding flow, and feature framing."
       bullets={[
-        "Dashboard structure and feature organization",
-        "Information architecture for growing products",
-        "User-facing workflow clarity in ambiguous environments",
-        "Product messaging that supports usability",
+        "Dashboard structure and feature organization across a growing advisor product",
+        "Information architecture for tools that expanded beyond simple reports",
+        "User-facing workflow clarity in onboarding, navigation, and delivery",
+        "Feature framing tied to actual implementation constraints",
       ]}
     />
   );

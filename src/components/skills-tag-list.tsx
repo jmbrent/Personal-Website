@@ -8,7 +8,7 @@ export function SkillsTagList({ items }: SkillsTagListProps) {
       {items.map((item) => (
         <li
           key={item}
-          className="rounded-full border border-stone-300 bg-stone-100 px-3 py-1 text-xs font-medium tracking-[0.03em] text-stone-700"
+          className="rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-medium tracking-[0.03em] text-stone-700"
         >
           {item}
         </li>

@@ -23,7 +23,7 @@ export function PageShell({
         description={description}
       />
       <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="rounded-[1.9rem] border border-stone-200 bg-white p-7 shadow-[0_20px_50px_rgba(53,42,31,0.07)]">
+        <div className="rounded-[1.25rem] border border-black/10 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
             Direction
           </p>
@@ -31,32 +31,32 @@ export function PageShell({
             {bullets.map((bullet) => (
               <li
                 key={bullet}
-                className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
+                className="rounded-2xl border border-black/10 bg-white px-4 py-3"
               >
                 {bullet}
               </li>
             ))}
           </ul>
         </div>
-        <div className="rounded-[1.9rem] border border-stone-200 bg-[linear-gradient(180deg,rgba(245,238,227,0.9),rgba(255,255,255,0.95))] p-7 shadow-[0_20px_50px_rgba(53,42,31,0.07)]">
+        <div className="rounded-[1.25rem] border border-black/10 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-            Current Focus
+            Note
           </p>
           <p className="mt-4 text-base leading-7 text-stone-700">
-            The Project Management section is the primary archive right now. The
-            adjacent sections give this site a complete structure while leaving
-            room for more curated work later.
+            These sections are lighter than the Project Management archive right
+            now. They exist to separate adjacent areas of work without forcing
+            everything into one page.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/project-management"
-              className="rounded-full bg-stone-900 px-5 py-3 text-sm font-medium text-stone-50 transition hover:bg-stone-700"
+              className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-stone-800"
             >
-              View project library
+              Open project archive
             </Link>
             <Link
               href="/resume"
-              className="rounded-full border border-stone-300 px-5 py-3 text-sm font-medium text-stone-700 transition hover:border-stone-700 hover:text-stone-950"
+              className="rounded-full border border-black/10 px-5 py-3 text-sm font-medium text-stone-700 transition hover:border-black hover:text-black"
             >
               Open resume
             </Link>

@@ -15,12 +15,12 @@ export default function ProjectManagementPage() {
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-5 py-12 lg:px-8 lg:py-16">
       <SectionHeader
         eyebrow="Project Management"
-        title="Implementation, rollout, onboarding, and systems work"
-        description="This section highlights implementation, onboarding, product rollout, stakeholder coordination, systems thinking, and cross-functional execution. Each project is structured to support both fast scanning and deeper click-through review."
+        title="Implementation, onboarding, rollout, and systems work"
+        description="This archive focuses on real PM-adjacent work inside an early-stage fintech environment: onboarding systems, dashboard structure, CRM-connected workflows, lifecycle communication, and product rollout support."
       />
       <Suspense
         fallback={
-          <div className="rounded-[1.75rem] border border-stone-200 bg-white p-6 text-stone-600 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <div className="rounded-[1.25rem] border border-black/10 bg-white p-6 text-stone-600">
             Loading project filters...
           </div>
         }

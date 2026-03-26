@@ -1,15 +1,12 @@
 "use client";
 
 type FilterBarProps = {
+  search: string;
   projectTypes: string[];
-  companies: string[];
-  roles: string[];
   skills: string[];
   years: string[];
   values: {
     projectType: string;
-    company: string;
-    role: string;
     skill: string;
     year: string;
     sort: string;
@@ -19,12 +16,11 @@ type FilterBarProps = {
 };
 
 const fieldClassName =
-  "w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 text-sm text-stone-800 outline-none transition focus:border-stone-900";
+  "w-full rounded-full border border-black/10 bg-white px-4 py-3 text-sm text-stone-800 outline-none transition focus:border-black";
 
 export function FilterBar({
+  search,
   projectTypes,
-  companies,
-  roles,
   skills,
   years,
   values,
@@ -32,62 +28,23 @@ export function FilterBar({
   onReset,
 }: FilterBarProps) {
   return (
-    <div className="rounded-[1.75rem] border border-stone-200 bg-white p-5 shadow-[0_18px_45px_rgba(53,42,31,0.06)]">
-      <div className="grid gap-4 lg:grid-cols-6">
+    <div className="sticky top-[6.5rem] z-20 rounded-[1.25rem] border border-black/10 bg-white/95 p-4 backdrop-blur">
+      <div className="grid gap-4 lg:grid-cols-[1.5fr_0.7fr_0.7fr_0.7fr]">
         <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-            Project Type
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
+            Search
           </span>
-          <select
+          <input
             className={fieldClassName}
-            value={values.projectType}
-            onChange={(event) => onChange("projectType", event.target.value)}
-          >
-            <option value="">All project types</option>
-            {projectTypes.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
+            type="search"
+            value={search}
+            placeholder="Search projects, outputs, or skills"
+            onChange={(event) => onChange("search", event.target.value)}
+          />
         </label>
         <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-            Industry / Client
-          </span>
-          <select
-            className={fieldClassName}
-            value={values.company}
-            onChange={(event) => onChange("company", event.target.value)}
-          >
-            <option value="">All companies</option>
-            {companies.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-            Role
-          </span>
-          <select
-            className={fieldClassName}
-            value={values.role}
-            onChange={(event) => onChange("role", event.target.value)}
-          >
-            <option value="">All roles</option>
-            {roles.map((item) => (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
-            Skill Area
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
+            Skill
           </span>
           <select
             className={fieldClassName}
@@ -103,7 +60,7 @@ export function FilterBar({
           </select>
         </label>
         <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
             Year
           </span>
           <select
@@ -120,7 +77,7 @@ export function FilterBar({
           </select>
         </label>
         <label className="flex flex-col gap-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-500">
             Sort
           </span>
           <select
@@ -135,15 +92,45 @@ export function FilterBar({
           </select>
         </label>
       </div>
-      <div className="mt-4 flex items-center justify-between gap-4">
+      <div className="mt-4 overflow-x-auto">
+        <div className="flex min-w-max gap-2 pb-1">
+          <button
+            type="button"
+            onClick={() => onChange("projectType", "")}
+            className={`rounded-full border px-4 py-2 text-sm transition ${
+              values.projectType
+                ? "border-black/10 text-stone-600 hover:border-black"
+                : "border-black bg-black text-white"
+            }`}
+          >
+            All project types
+          </button>
+          {projectTypes.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() =>
+                onChange("projectType", values.projectType === item ? "" : item)
+              }
+              className={`rounded-full border px-4 py-2 text-sm transition ${
+                values.projectType === item
+                  ? "border-black bg-black text-white"
+                  : "border-black/10 text-stone-600 hover:border-black hover:text-black"
+              }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="mt-4 flex items-center justify-between gap-4 border-t border-black/8 pt-4">
         <p className="text-sm leading-6 text-stone-600">
-          Filter by implementation type, company context, role scope, skill
-          area, and timeline.
+          Minimal filters for scanning without turning the page into a dashboard.
         </p>
         <button
           type="button"
           onClick={onReset}
-          className="rounded-full border border-stone-300 px-4 py-2 text-sm text-stone-700 transition hover:border-stone-700 hover:text-stone-950"
+          className="rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
         >
           Reset filters
         </button>

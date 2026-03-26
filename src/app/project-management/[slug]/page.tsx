@@ -47,11 +47,22 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     project.relatedProjects?.includes(entry.id),
   );
 
+  const sections = [
+    { id: "context", label: "Context" },
+    { id: "objective", label: "Objective" },
+    { id: "ownership", label: "What I Owned" },
+    { id: "deliverables", label: "Built / Changed" },
+    { id: "collaboration", label: "Collaboration" },
+    { id: "skills", label: "Skills" },
+    { id: "outcomes", label: "Outcome / Impact" },
+    { id: "resume", label: "Resume Versions" },
+  ];
+
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 py-12 lg:px-8 lg:py-16">
       <Link
         href="/project-management"
-        className="inline-flex w-fit rounded-full border border-stone-300 px-4 py-2 text-sm text-stone-700 transition hover:border-stone-700 hover:text-stone-950"
+        className="inline-flex w-fit rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
       >
         Back to project management
       </Link>
@@ -68,23 +79,51 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         ]}
       />
 
-      <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+        <aside className="lg:sticky lg:top-28 lg:h-fit">
+          <div className="rounded-[1.25rem] border border-black/10 bg-white p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+              On this page
+            </p>
+            <nav className="mt-4 flex flex-col gap-2">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+                >
+                  {section.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
+
         <div className="grid gap-6">
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="context"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <SectionHeader
               eyebrow="Context"
               title="Starting situation"
               description={project.context}
             />
           </section>
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="objective"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <SectionHeader
               eyebrow="Objective"
               title="What the project needed to achieve"
               description={project.objective}
             />
           </section>
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="ownership"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               What I Owned
             </p>
@@ -92,32 +131,42 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.ownership.map((item) => (
                 <li
                   key={item}
-                  className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
+                  className="rounded-2xl border border-black/10 bg-white px-4 py-3"
                 >
                   {item}
                 </li>
               ))}
             </ul>
           </section>
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="deliverables"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               What I Built / Changed
             </p>
-            <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
-              {project.deliverables.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {project.deliverables.length ? (
+              <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
+                {project.deliverables.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-5 text-base leading-7 text-stone-600">
+                This project was more heavily centered on ownership, coordination,
+                and rollout support than on discrete build outputs.
+              </p>
+            )}
           </section>
-        </div>
-
-        <div className="grid gap-6">
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="collaboration"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               Collaboration
             </p>
@@ -125,14 +174,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.collaborators.map((item) => (
                 <li
                   key={item}
-                  className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
+                  className="rounded-2xl border border-black/10 bg-white px-4 py-3"
                 >
                   {item}
                 </li>
               ))}
             </ul>
           </section>
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="skills"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               Skills Used
             </p>
@@ -143,27 +195,36 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <SkillsTagList items={project.skills} />
             </div>
           </section>
-          <section className="rounded-[1.75rem] border border-stone-200 bg-white p-6 shadow-[0_18px_48px_rgba(53,42,31,0.06)]">
+          <section
+            id="outcomes"
+            className="scroll-mt-28 rounded-[1.25rem] border border-black/10 bg-white p-6"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               Outcome / Impact
             </p>
-            <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
-              {project.outcomes.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {project.outcomes.length ? (
+              <ul className="mt-5 grid gap-3 text-base leading-7 text-stone-700">
+                {project.outcomes.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-2xl border border-black/10 bg-white px-4 py-3"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-5 text-base leading-7 text-stone-600">
+                Outcome detail can be expanded further as this project archive grows.
+              </p>
+            )}
             <dl className="mt-6 grid gap-4 md:grid-cols-3">
               {project.metrics.map((metric) => (
                 <div
                   key={metric.label}
-                  className="rounded-2xl border border-stone-200 bg-stone-950 px-4 py-4 text-stone-50"
+                  className="rounded-2xl border border-black/10 bg-white px-4 py-4 text-black"
                 >
-                  <dt className="text-xs uppercase tracking-[0.16em] text-stone-300">
+                  <dt className="text-xs uppercase tracking-[0.16em] text-stone-500">
                     {metric.label}
                   </dt>
                   <dd className="mt-2 text-lg font-semibold">{metric.value}</dd>
@@ -174,11 +235,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <ResumeVersionBlock
-        shortVersion={project.shortResumeVersion}
-        longVersion={project.longResumeVersion}
-        keywords={project.tags}
-      />
+      <div id="resume" className="scroll-mt-28">
+        <ResumeVersionBlock
+          shortVersion={project.shortResumeVersion}
+          longVersion={project.longResumeVersion}
+          keywords={project.tags}
+        />
+      </div>
 
       <RelatedProjects projects={relatedProjects} />
     </main>

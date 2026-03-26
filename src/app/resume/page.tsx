@@ -8,8 +8,14 @@ export const metadata = {
 };
 
 const resumeLinks = [
-  { label: "Download PDF resume", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/jonathanmbrent/",
+  },
+  {
+    label: "IMDb",
+    href: "https://www.imdb.com/name/nm6025350/",
+  },
 ];
 
 export default function ResumePage() {
@@ -23,11 +29,11 @@ export default function ResumePage() {
       role: "Product & Content Lead",
       timeline: "2023 - Present",
       summary:
-        "Lead cross-functional implementation, onboarding, product structuring, rollout support, and user-facing systems work across a growing fintech platform.",
+        "Led onboarding systems, dashboard organization, rollout support, CRM-connected workflow planning, and user-facing product structure across Finliti's advisor platform.",
       relatedProjects: [
         "advisor-onboarding-system-transformation",
         "crm-behavioral-profile-integration",
-        "enterprise-product-rollout-early-client-growth",
+        "enterprise-rollout-early-client-growth",
         "advisor-dashboard-platform-expansion",
       ],
     },
@@ -36,7 +42,7 @@ export default function ResumePage() {
       role: "Content Lead",
       timeline: "2021 - Present",
       summary:
-        "Owned content systems, lifecycle communication, messaging strategy, and product-facing copy that supported discovery, onboarding, and retention.",
+        "Owned lifecycle communication, content strategy, survey/report framing, and onboarding-supporting messaging across the product journey.",
       relatedProjects: [
         "lifecycle-email-engagement-system",
         "b2c-discovery-survey-funnel",
@@ -48,41 +54,40 @@ export default function ResumePage() {
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-5 py-12 lg:px-8 lg:py-16">
       <SectionHeader
         eyebrow="Resume"
-        title="Concise experience with direct paths into deeper project detail"
-        description="This page keeps the resume view compact while linking directly into project pages that provide fuller context, ownership, deliverables, and outcomes."
+        title="Compact experience view with direct links into detailed project pages"
+        description="This page stays concise, but each role links back to fuller project entries so the resume can stay short without feeling vague."
       />
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-[1.9rem] border border-stone-200 bg-white p-7 shadow-[0_20px_50px_rgba(53,42,31,0.07)]">
+        <div className="rounded-[1.25rem] border border-black/10 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
             Professional Summary
           </p>
           <p className="mt-5 text-lg leading-8 text-stone-700">
-            Product and content lead with experience translating evolving startup
-            work into structured onboarding systems, clearer product workflows,
-            CRM-connected integrations, lifecycle communications, and client-ready
-            rollout support. Strongest in ambiguous environments where execution,
-            clarity, and coordination matter at the same time.
+            Product and content lead with hands-on experience across onboarding,
+            implementation, dashboard structure, lifecycle communication, and
+            rollout support inside a startup fintech environment. Strongest where
+            evolving work needs to be turned into something clearer, more usable,
+            and easier to operate.
           </p>
         </div>
-        <div className="rounded-[1.9rem] border border-stone-200 bg-[linear-gradient(180deg,rgba(240,229,212,0.9),rgba(255,255,255,0.96))] p-7 shadow-[0_20px_50px_rgba(53,42,31,0.07)]">
+        <div className="rounded-[1.25rem] border border-black/10 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
-            Resume Links
+            Reference Links
           </p>
           <div className="mt-5 flex flex-col gap-3">
             {resumeLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="rounded-2xl border border-stone-300 bg-white px-4 py-3 text-sm text-stone-700 transition hover:border-stone-700 hover:text-stone-950"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-stone-700 transition hover:border-black hover:text-black"
               >
                 {link.label}
               </a>
             ))}
           </div>
-          <p className="mt-5 text-sm leading-6 text-stone-600">
-            Replace placeholder links with final resume files or public profiles.
-          </p>
         </div>
       </section>
 
@@ -90,7 +95,7 @@ export default function ResumePage() {
         {experience.map((entry) => (
           <article
             key={`${entry.company}-${entry.role}`}
-            className="rounded-[1.9rem] border border-stone-200 bg-white p-7 shadow-[0_20px_50px_rgba(53,42,31,0.07)]"
+            className="rounded-[1.25rem] border border-black/10 bg-white p-7"
           >
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
@@ -101,7 +106,7 @@ export default function ResumePage() {
                   {entry.role}
                 </h2>
               </div>
-              <p className="rounded-full border border-stone-300 px-4 py-2 text-sm text-stone-700">
+              <p className="rounded-full border border-black/10 px-4 py-2 text-sm text-stone-700">
                 {entry.timeline}
               </p>
             </div>
@@ -124,7 +129,7 @@ export default function ResumePage() {
                     <Link
                       key={project.id}
                       href={`/project-management/${project.slug}`}
-                      className="rounded-full border border-stone-300 bg-stone-50 px-4 py-2 text-sm text-stone-700 transition hover:border-stone-700 hover:bg-white hover:text-stone-950"
+                      className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
                     >
                       {project.title}
                     </Link>

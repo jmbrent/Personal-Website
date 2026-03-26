@@ -17,20 +17,20 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-[rgba(248,246,241,0.88)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-5 py-4 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex flex-col">
             <span className="font-[family-name:var(--font-sans)] text-sm uppercase tracking-[0.28em] text-stone-500">
               Jonathan Brent
             </span>
-            <span className="font-[family-name:var(--font-display)] text-xl text-stone-950">
-              Portfolio / Resume Archive
+            <span className="font-[family-name:var(--font-display)] text-xl text-black">
+              Project Archive
             </span>
           </Link>
           <p className="hidden max-w-md text-sm leading-6 text-stone-600 md:block">
-            Structured project work focused on implementation, product systems,
-            rollout, and cross-functional execution.
+            Product, onboarding, implementation, and cross-functional delivery
+            work from Finliti.
           </p>
         </div>
         <nav className="overflow-x-auto">
@@ -47,8 +47,8 @@ export function SiteHeader() {
                     href={item.href}
                     className={`inline-flex rounded-full border px-4 py-2 text-sm transition ${
                       isActive
-                        ? "border-stone-900 bg-stone-900 text-stone-50"
-                        : "border-stone-300 bg-white/70 text-stone-700 hover:border-stone-500 hover:text-stone-950"
+                        ? "border-black bg-black text-white"
+                        : "border-black/15 bg-white text-stone-700 hover:border-black hover:text-black"
                     }`}
                   >
                     {item.label}
