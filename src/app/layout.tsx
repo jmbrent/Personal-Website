@@ -23,15 +23,17 @@ export default async function RootLayout({
   const requestHeaders = await headers();
   const rewritePath = requestHeaders.get("x-matched-path");
   const isHoldPage = rewritePath === "/under-construction";
+  const isPreviewLoginPage = rewritePath === "/preview-login";
+  const hideChrome = isHoldPage || isPreviewLoginPage;
 
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--color-page)] text-[var(--color-ink)] antialiased">
         <div className="relative flex min-h-screen flex-col">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(212,188,149,0.18),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(125,146,135,0.12),transparent_28%),linear-gradient(180deg,#f8f6f1_0%,#f5f1ea_42%,#f8f6f1_100%)]" />
-          {isHoldPage ? null : <SiteHeader />}
+          {hideChrome ? null : <SiteHeader />}
           {children}
-          {isHoldPage ? null : <SiteFooter />}
+          {hideChrome ? null : <SiteFooter />}
         </div>
       </body>
     </html>
