@@ -70,9 +70,9 @@ export function FilterBar({
         <div className="flex border border-black/10">
           <Link
             href={buildViewHref("list")}
-            className={`px-4 py-2 text-sm transition ${
+            className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
               values.view === "list"
-                ? "bg-black text-white"
+                ? "bg-black text-white hover:text-white"
                 : "text-stone-600 hover:text-black"
             }`}
           >
@@ -80,9 +80,9 @@ export function FilterBar({
           </Link>
           <Link
             href={buildViewHref("grid")}
-            className={`border-l border-black/10 px-4 py-2 text-sm transition ${
+            className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
               values.view === "grid"
-                ? "bg-black text-white"
+                ? "bg-black text-white hover:text-white"
                 : "text-stone-600 hover:text-black"
             }`}
           >

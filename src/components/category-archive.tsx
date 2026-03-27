@@ -27,7 +27,9 @@ export function CategoryArchive({
 }: CategoryArchiveProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const view = searchParams.get("view") === "grid" ? "grid" : defaultView;
+  const rawView = searchParams.get("view");
+  const view =
+    rawView === "list" || rawView === "grid" ? rawView : defaultView;
 
   const buildViewHref = (nextView: "list" | "grid") => {
     const nextParams = new URLSearchParams(searchParams.toString());
@@ -60,9 +62,9 @@ export function CategoryArchive({
             <div className="flex border border-black/10 bg-white">
               <Link
                 href={buildViewHref("list")}
-                className={`px-4 py-2 text-sm transition ${
+                className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
                   view === "list"
-                    ? "bg-black text-white"
+                    ? "bg-black text-white hover:text-white"
                     : "text-stone-600 hover:text-black"
                 }`}
               >
@@ -70,9 +72,9 @@ export function CategoryArchive({
               </Link>
               <Link
                 href={buildViewHref("grid")}
-                className={`border-l border-black/10 px-4 py-2 text-sm transition ${
+                className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
                   view === "grid"
-                    ? "bg-black text-white"
+                    ? "bg-black text-white hover:text-white"
                     : "text-stone-600 hover:text-black"
                 }`}
               >
