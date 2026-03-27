@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -78,6 +79,32 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           { label: "Scope level", value: project.scopeLevel },
         ]}
       />
+
+      {project.galleryImages?.length ? (
+        <section className="grid gap-4 md:grid-cols-2">
+          {project.galleryImages.map((image) => (
+            <div
+              key={image.src}
+              className="relative overflow-hidden border border-black/10 bg-stone-100"
+            >
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                  style={{
+                    objectFit: image.fit ?? "cover",
+                    objectPosition: image.position ?? "center",
+                  }}
+                  unoptimized={image.src.endsWith(".gif") || image.src.endsWith(".svg")}
+                />
+              </div>
+            </div>
+          ))}
+        </section>
+      ) : null}
 
       <section className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
         <aside className="lg:sticky lg:top-28 lg:h-fit">

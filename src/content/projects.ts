@@ -974,6 +974,25 @@ export const projects: Project[] = [
     industry: "Film / Media",
     audience: "Production teams and audiences",
     scopeLevel: "External / Production",
+    coverImage: {
+      src: "/project-images/film/byeeee-poster.png",
+      alt: "Byeeee poster artwork.",
+      fit: "cover",
+      position: "center top",
+    },
+    galleryImages: [
+      {
+        src: "/project-images/film/byeeee-poster.png",
+        alt: "Byeeee poster artwork.",
+        fit: "cover",
+        position: "center top",
+      },
+      {
+        src: "/project-images/film/byeeee-billboard.png",
+        alt: "Byeeee billboard artwork over a tree canopy.",
+        fit: "cover",
+      },
+    ],
   },
   {
     id: "get-hooked-production-coordination",

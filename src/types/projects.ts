@@ -54,6 +54,7 @@ export type Project = {
   audience: string;
   scopeLevel: string;
   coverImage?: ProjectImage;
+  galleryImages?: ProjectImage[];
   links?: ProjectLink[];
   relatedProjects?: string[];
 };
