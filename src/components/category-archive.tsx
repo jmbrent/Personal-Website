@@ -10,6 +10,7 @@ type CategoryArchiveProps = {
   accentClassName?: string;
   linkHref?: string;
   linkLabel?: string;
+  layout?: "list" | "grid";
 };
 
 export function CategoryArchive({
@@ -19,6 +20,7 @@ export function CategoryArchive({
   accentClassName = "bg-stone-100",
   linkHref,
   linkLabel,
+  layout = "list",
 }: CategoryArchiveProps) {
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 pb-20 pt-3 lg:px-8 lg:pb-24 lg:pt-4">
@@ -45,7 +47,11 @@ export function CategoryArchive({
         </div>
       </section>
 
-      <div className="grid gap-10">
+      <div
+        className={
+          layout === "grid" ? "grid gap-8 md:grid-cols-2" : "grid gap-10"
+        }
+      >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
