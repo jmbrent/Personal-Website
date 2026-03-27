@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { ProjectCover } from "@/components/project-cover";
 import { getProjectTimelineLabel } from "@/lib/projects";
 import { Project } from "@/types/projects";
 
@@ -15,11 +16,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article className="group flex h-full flex-col border-t border-black pt-5 transition">
+      <ProjectCover
+        project={project}
+        className="mb-5 aspect-[16/10]"
+      />
       <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
         <span>{project.projectType}</span>
-        <span className="h-1 w-1 rounded-full bg-stone-300" />
+        <span className="h-1 w-1 bg-stone-300" />
         <span>{project.company}</span>
-        <span className="h-1 w-1 rounded-full bg-stone-300" />
+        <span className="h-1 w-1 bg-stone-300" />
         <span>{timeline}</span>
       </div>
       <div className="mt-6 flex flex-1 flex-col gap-5">

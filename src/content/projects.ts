@@ -70,6 +70,12 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors and advisory firms",
     scopeLevel: "External / B2B SaaS",
+    coverImage: {
+      src: "/project-images/pm/advisor-onboarding-flow.png",
+      alt: "Finliti advisor onboarding flow diagram.",
+      fit: "contain",
+      position: "center",
+    },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
       "enterprise-rollout-early-client-growth",
@@ -150,6 +156,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors",
     scopeLevel: "External / B2B SaaS",
+    coverImage: {
+      src: "/project-images/pm/dashboard-platform.png",
+      alt: "Finliti advisor dashboard interface.",
+    },
     relatedProjects: [
       "market-alerts-portfolio-signal-system",
       "crm-behavioral-profile-integration",
@@ -217,6 +227,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors",
     scopeLevel: "External / Integration",
+    coverImage: {
+      src: "/project-images/pm/crm-dashboard.png",
+      alt: "Finliti client management dashboard used to represent CRM workflow integration.",
+    },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
       "market-alerts-portfolio-signal-system",
@@ -284,6 +298,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors",
     scopeLevel: "External / Feature prototype",
+    coverImage: {
+      src: "/project-images/pm/market-alerts-dashboard.png",
+      alt: "Finliti advisor platform screen used to represent portfolio and alerts work.",
+    },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
       "crm-behavioral-profile-integration",
@@ -351,6 +369,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors and product users",
     scopeLevel: "External / Communications",
+    coverImage: {
+      src: "/project-images/pm/lifecycle-newsletter.png",
+      alt: "Finliti newsletter artwork representing lifecycle email and engagement work.",
+    },
     relatedProjects: [
       "advisor-onboarding-system-transformation",
       "b2c-discovery-survey-funnel",
@@ -409,6 +431,11 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "End users",
     scopeLevel: "External / B2C",
+    coverImage: {
+      src: "/project-images/pm/advisor-onboarding-flow.png",
+      alt: "Finliti user journey flow representing the discovery survey funnel.",
+      fit: "contain",
+    },
     relatedProjects: ["lifecycle-email-engagement-system"],
   },
   {
@@ -468,6 +495,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors and enterprise firms",
     scopeLevel: "External / Enterprise / B2B",
+    coverImage: {
+      src: "/project-images/pm/rbc-finsec-deck.png",
+      alt: "Finliti enterprise demo deck slide.",
+    },
     relatedProjects: [
       "advisor-onboarding-system-transformation",
       "rbc-finsec-incubator-participation",
@@ -521,6 +552,11 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Internal team",
     scopeLevel: "Internal",
+    coverImage: {
+      src: "/project-images/pm/advisor-onboarding-flow.png",
+      alt: "Workflow diagram representing intern coordination and feature support.",
+      fit: "contain",
+    },
     relatedProjects: ["enterprise-rollout-early-client-growth"],
   },
   {
@@ -578,6 +614,10 @@ export const projects: Project[] = [
     industry: "Fintech / Banking",
     audience: "Stakeholders and industry partners",
     scopeLevel: "External / Strategic",
+    coverImage: {
+      src: "/project-images/pm/rbc-finsec-deck.png",
+      alt: "Finliti RBC FinSec presentation slide.",
+    },
     relatedProjects: ["enterprise-rollout-early-client-growth"],
   },
   {
@@ -745,6 +785,10 @@ export const projects: Project[] = [
     industry: "Fintech / WealthTech",
     audience: "Advisors and end users",
     scopeLevel: "External / Product communications",
+    coverImage: {
+      src: "/project-images/creative/finliti-content.png",
+      alt: "Finliti newsletter artwork used to represent content systems and product explainers.",
+    },
   },
   {
     id: "nimble-media-client-content-systems",
@@ -803,6 +847,10 @@ export const projects: Project[] = [
     industry: "Agency / Media",
     audience: "Client brands and campaign audiences",
     scopeLevel: "External / Client services",
+    coverImage: {
+      src: "/project-images/creative/finliti-content.png",
+      alt: "Editorial-style artwork used as a stand-in cover for client content systems work.",
+    },
   },
   {
     id: "scalepoynt-video-creative-lead",
@@ -861,6 +909,11 @@ export const projects: Project[] = [
     industry: "Creative / Commercial",
     audience: "Prospects, users, and stakeholders",
     scopeLevel: "External / Contract",
+    coverImage: {
+      src: "/project-images/creative/scalepoynt-badge.png",
+      alt: "ScalePoynt brand badge.",
+      fit: "contain",
+    },
   },
   {
     id: "byeeee-feature-film",
@@ -1030,6 +1083,11 @@ export const projects: Project[] = [
     industry: "Film / TV Development",
     audience: "Development partners and future audiences",
     scopeLevel: "External / Development",
+    coverImage: {
+      src: "/project-images/film/finding-green.gif",
+      alt: "Finding Green animated still.",
+      fit: "cover",
+    },
   },
   {
     id: "property-brothers-forever-home",
@@ -1199,5 +1257,10 @@ export const projects: Project[] = [
     industry: "Creative / Digital Services",
     audience: "Clients and collaborators",
     scopeLevel: "External / Client services",
+    coverImage: {
+      src: "/project-images/pm/advisor-onboarding-flow.png",
+      alt: "Workflow diagram representing freelance client project delivery.",
+      fit: "contain",
+    },
   },
 ];

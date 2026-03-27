@@ -1,3 +1,4 @@
+import { ProjectCover } from "@/components/project-cover";
 import { getProjectTimelineLabel } from "@/lib/projects";
 import { Project } from "@/types/projects";
 
@@ -71,6 +72,7 @@ export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
           </dd>
         </div>
       </dl>
+      <ProjectCover project={project} priority className="mt-8 aspect-[16/8]" />
     </section>
   );
 }

@@ -15,6 +15,13 @@ export type ProjectLink = {
   href: string;
 };
 
+export type ProjectImage = {
+  src: string;
+  alt: string;
+  fit?: "cover" | "contain";
+  position?: string;
+};
+
 export type Project = {
   id: string;
   slug: string;
@@ -46,6 +53,7 @@ export type Project = {
   industry: string;
   audience: string;
   scopeLevel: string;
+  coverImage?: ProjectImage;
   links?: ProjectLink[];
   relatedProjects?: string[];
 };
