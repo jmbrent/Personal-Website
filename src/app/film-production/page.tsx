@@ -18,7 +18,7 @@ export default function FilmProductionPage() {
       accentClassName="bg-[linear-gradient(180deg,rgba(225,238,232,0.82),rgba(255,255,255,1))]"
       linkHref="/"
       linkLabel="All work"
-      layout="grid"
+      defaultView="grid"
     />
   );
 }

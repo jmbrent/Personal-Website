@@ -77,7 +77,11 @@ export function ProjectLibrary({
       >
         {visibleProjects.length ? (
           visibleProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              view={values.view === "grid" ? "grid" : "list"}
+            />
           ))
         ) : (
           <div className="rounded-[1.25rem] border border-dashed border-stone-300 bg-white p-8 text-center text-stone-600">

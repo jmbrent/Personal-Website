@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { ProjectCard } from "@/components/project-card";
 import { Project } from "@/types/projects";
@@ -10,7 +13,7 @@ type CategoryArchiveProps = {
   accentClassName?: string;
   linkHref?: string;
   linkLabel?: string;
-  layout?: "list" | "grid";
+  defaultView?: "list" | "grid";
 };
 
 export function CategoryArchive({
@@ -20,8 +23,28 @@ export function CategoryArchive({
   accentClassName = "bg-stone-100",
   linkHref,
   linkLabel,
-  layout = "list",
+  defaultView = "list",
 }: CategoryArchiveProps) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const view = searchParams.get("view") === "grid" ? "grid" : defaultView;
+
+  const setView = (nextView: "list" | "grid") => {
+    const nextParams = new URLSearchParams(searchParams.toString());
+
+    if (nextView === defaultView) {
+      nextParams.delete("view");
+    } else {
+      nextParams.set("view", nextView);
+    }
+
+    const nextQuery = nextParams.toString();
+    router.replace(nextQuery ? `${pathname}?${nextQuery}` : pathname, {
+      scroll: false,
+    });
+  };
+
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 pb-20 pt-3 lg:px-8 lg:pb-24 lg:pt-4">
       <section className={`border border-black/10 p-5 ${accentClassName}`}>
@@ -36,24 +59,48 @@ export function CategoryArchive({
               </p>
             ) : null}
           </div>
-          {linkHref && linkLabel ? (
-            <Link
-              href={linkHref}
-              className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:text-white"
-            >
-              {linkLabel}
-            </Link>
-          ) : null}
+          <div className="flex items-center gap-3">
+            <div className="flex border border-black/10 bg-white">
+              <button
+                type="button"
+                onClick={() => setView("list")}
+                className={`px-4 py-2 text-sm transition ${
+                  view === "list"
+                    ? "bg-black text-white"
+                    : "text-stone-600 hover:text-black"
+                }`}
+              >
+                List
+              </button>
+              <button
+                type="button"
+                onClick={() => setView("grid")}
+                className={`border-l border-black/10 px-4 py-2 text-sm transition ${
+                  view === "grid"
+                    ? "bg-black text-white"
+                    : "text-stone-600 hover:text-black"
+                }`}
+              >
+                Grid
+              </button>
+            </div>
+            {linkHref && linkLabel ? (
+              <Link
+                href={linkHref}
+                className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+              >
+                {linkLabel}
+              </Link>
+            ) : null}
+          </div>
         </div>
       </section>
 
       <div
-        className={
-          layout === "grid" ? "grid gap-8 md:grid-cols-2" : "grid gap-10"
-        }
+        className={view === "grid" ? "grid gap-8 md:grid-cols-2" : "grid gap-10"}
       >
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} view={view} />
         ))}
       </div>
     </main>
