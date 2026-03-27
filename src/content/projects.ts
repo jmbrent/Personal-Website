@@ -15,28 +15,28 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Transformed advisor onboarding from a manual, email-based process into a fully automated SaaS onboarding system.",
+      "Moved advisor onboarding from a manual Typeform, Google Sheets, and database workflow into a self-serve Pulse platform flow with Stripe billing, survey setup, and in-platform client communication.",
     shortResumeVersion:
-      "Transformed advisor onboarding from a manual, email-based process into a fully automated SaaS onboarding system.",
+      "Redesigned advisor onboarding from a manual multi-step workflow into a self-serve platform experience that reduced setup from hours or days to minutes.",
     longResumeVersion:
-      "Owned onboarding flow design, user experience structure, documentation, and system flow as Finliti moved advisor onboarding from email signups and manual survey distribution into a centralized self-serve SaaS experience.",
+      "Owned onboarding flow design, platform guidance, and system logic as Finliti moved advisor setup from a Typeform, Google Sheets, pgAdmin, and manual survey-link workflow into a centralized Pulse platform with Stripe plan selection, survey creation, activation controls, and in-platform client broadcast.",
     context:
-      "Onboarding was previously handled through email signups, PDF reports, and manual survey distribution with no centralized system or visibility.",
+      "Advisors were previously onboarded through a setup wizard and Typeform flow that fed Google Sheets. The team then manually created advisor records in pgAdmin, provisioned discovery surveys in Typeform, added clients one by one with unique identifiers, generated survey links manually, and handled payment outside the product.",
     objective:
-      "Create a scalable, low-friction onboarding experience for advisors and firms.",
+      "Replace a manual, multi-person onboarding process with a faster, scalable advisor setup experience that handled billing, activation, survey setup, and communication inside one system.",
     ownership: [
       "Onboarding flow design",
       "User experience structure",
-      "Documentation and guidance",
-      "Onboarding logic and system flow",
+      "Activation logic and access states",
+      "Survey setup and client broadcast workflow",
     ],
     deliverables: [
-      "Designed simplified signup flow",
-      "Implemented Stripe-based plan purchase system",
-      "Structured automated onboarding activation",
-      "Created dashboard-based onboarding experience",
-      "Built survey distribution workflow for advisor clients",
-      "Introduced demo bypass system for pilot environments",
+      "Designed advisor signup and plan-selection flow",
+      "Implemented Stripe billing with 3 plan options",
+      "Structured automated activation and feature-gating logic",
+      "Created in-platform survey creation and preview workflow",
+      "Built in-platform client broadcast and email workflow",
+      "Introduced demo bypass and pilot-mode support",
     ],
     collaborators: ["CEO", "CTO", "1 software developer"],
     skills: [
@@ -49,15 +49,16 @@ export const projects: Project[] = [
     ],
     tools: ["Stripe", "Advisor dashboard", "Survey workflow"],
     outcomes: [
-      "Onboarded ~10 advisors across ~4 firms",
-      "Reduced reliance on manual onboarding processes",
-      "Enabled self-serve onboarding vs assisted setup",
-      "Improved scalability of advisor acquisition",
+      "Onboarded ~10 active advisors across ~4 paid pilot firms",
+      "Reduced onboarding from hours or days to minutes",
+      "Eliminated 8+ manual onboarding and provisioning steps",
+      "Enabled self-serve onboarding instead of assisted setup",
+      "Improved scalability of advisor activation and pilot delivery",
     ],
     metrics: [
-      { label: "Advisors", value: "~10" },
-      { label: "Firms", value: "~4" },
-      { label: "Model", value: "Self-serve onboarding" },
+      { label: "Active advisors", value: "~10" },
+      { label: "Paid pilot firms", value: "~4" },
+      { label: "Time shift", value: "Days/hours to minutes" },
     ],
     tags: [
       "Onboarding / Implementation",
@@ -95,15 +96,15 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Expanded product from a simple survey/report tool into a multi-feature advisor platform with a unified dashboard.",
+      "Expanded the product from a survey-and-report workflow into a broader advisor platform with a unified dashboard, profiles, backtesting, portfolio tools, alerts, and AI-led features.",
     shortResumeVersion:
-      "Expanded the product from a simple survey/report tool into a multi-feature advisor platform with a unified dashboard.",
+      "Helped evolve the product from a simple survey/report tool into a multi-feature advisor platform with a centralized dashboard.",
     longResumeVersion:
-      "Owned dashboard structure, product organization, and user-facing feature integration as Finliti evolved from a fragmented report tool into a centralized advisor workspace.",
+      "Owned dashboard structure, product organization, and user-facing feature integration as Finliti evolved from a fragmented reporting workflow into a centralized advisor workspace with client profiles, backtesting, portfolio builder, market alerts, newsletter generation, and Pulse agent surfaces.",
     context:
-      "Initial product experience was fragmented and centered on standalone reports without a centralized system.",
+      "Early product use centered on surveys and long reports, with limited in-platform workflow and no cohesive advisor operating system tying together onboarding, profiles, portfolio tools, alerts, and communications.",
     objective:
-      "Create a cohesive advisor workspace where all tools and insights live in one system.",
+      "Create a cohesive advisor workspace where setup, client profiles, portfolio context, alerts, and communications live in one system.",
     ownership: [
       "Dashboard structure and logic",
       "Product organization and clarity",
@@ -117,7 +118,7 @@ export const projects: Project[] = [
       "Portfolio builder integration",
       "Backtesting tools integration",
       "Newsletter generator integration",
-      "AI voice/audio agent integration",
+      "Pulse agent and voice-agent surfaces",
       "Structured feature navigation",
     ],
     collaborators: ["CEO", "CTO", "Software developer"],
@@ -137,13 +138,14 @@ export const projects: Project[] = [
     ],
     outcomes: [
       "Transformed product into a centralized SaaS platform",
-      "Improved usability and feature discoverability",
-      "Enabled expansion into ongoing advisor workflows",
+      "Improved feature discoverability and product clarity",
+      "Expanded the advisor experience beyond static reports",
+      "Created a more usable ongoing workflow for advisors and firms",
     ],
     metrics: [
       { label: "Product state", value: "Centralized platform" },
-      { label: "Primary gain", value: "Usability" },
-      { label: "Mode", value: "Multi-feature dashboard" },
+      { label: "Live modules", value: "Survey, profiles, alerts, backtests, AI" },
+      { label: "Mode", value: "Advisor workspace" },
     ],
     tags: [
       "Product Build / Dashboard / UX",
@@ -179,15 +181,15 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Enabled behavioral profile data to be used within CRM systems for advisor workflows.",
+      "Defined how behavioral profile data should move into CRM workflows so advisors could use client personality insights inside day-to-day practice.",
     shortResumeVersion:
-      "Enabled behavioral profile data to be used within CRM systems for advisor workflows.",
+      "Defined workflow logic for exporting behavioral profile data into CRM environments for advisor use.",
     longResumeVersion:
-      "Defined workflow logic, data structure, and advisor use cases to make behavioral profile data actionable inside CRM environments.",
+      "Defined workflow logic, data structure, and advisor use cases for moving behavioral profile data out of standalone reports and into CRM-connected workflows, including profile exports, internal Pulse connections, and advisor-facing action surfaces.",
     context:
-      "Investor personality data existed but was not embedded into advisors' daily workflows.",
+      "Investor personality data existed, but it was not deeply embedded into advisor workflow systems. Advisors could access profile outputs, but the information was not yet structured for CRM-based use and follow-up.",
     objective:
-      "Make behavioral insights actionable inside CRM environments.",
+      "Make profile data operational by connecting it to CRM and advisor workflow surfaces.",
     ownership: [
       "Workflow definition",
       "Data structuring logic",
@@ -195,8 +197,8 @@ export const projects: Project[] = [
     ],
     deliverables: [
       "Structured export of behavioral profile data",
-      "Connected internal CRM (Finliti Pulse) with advisor workflows",
-      "Aligned personality data with advisor tools and decision-making",
+      "Defined internal Pulse workflow connections",
+      "Aligned investor profile data with advisor tools and communications",
     ],
     collaborators: ["CEO", "CTO", "Developer"],
     skills: [
@@ -208,13 +210,13 @@ export const projects: Project[] = [
     ],
     tools: ["Finliti Pulse", "Behavioral profile data exports", "Advisor workflow systems"],
     outcomes: [
-      "Enabled advisors to access client behavioral insights within workflow systems",
-      "Increased usability of investor profile data",
+      "Made personality-profile data more usable inside workflow systems",
+      "Moved profile outputs closer to day-to-day advisor action",
     ],
     metrics: [
       { label: "Integration", value: "CRM workflows" },
       { label: "Data type", value: "Behavioral profiles" },
-      { label: "Status", value: "Active" },
+      { label: "Status", value: "Live / evolving" },
     ],
     tags: [
       "Systems Integration / CRM",
@@ -250,25 +252,25 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Prototype",
     oneLineSummary:
-      "Developed a system linking portfolio data and investor profiles to real-time market alerts.",
+      "Helped structure a market-alert workflow connecting uploaded asset shelves, portfolio data, and investor profile logic into ongoing advisor signals.",
     shortResumeVersion:
-      "Developed a system linking portfolio data and investor profiles to real-time market alerts.",
+      "Helped structure a market-alert workflow connecting portfolio data and investor profile logic into ongoing advisor signals.",
     longResumeVersion:
-      "Owned the feature concept, workflow structure, and user value definition for a product layer that ties portfolios and investor profiles to ongoing alert logic.",
+      "Owned the feature concept, workflow structure, and user value definition for a product layer where firms can upload product shelves via CSV, map assets into categories, and generate profile-aware market alerts and advisor-facing signals.",
     context:
       "Product previously focused on static reports with limited ongoing value.",
     objective:
-      "Create continuous value through real-time insights tied to portfolios and behavioral profiles.",
+      "Create ongoing advisor utility through profile-aware alerts tied to client portfolios and firm product shelves.",
     ownership: [
       "Feature concept and structure",
       "Workflow clarity",
       "User value definition",
     ],
     deliverables: [
-      "Portfolio asset shelf logic",
-      "Alert system tied to user-defined assets",
-      "Categorization of alerts based on investor profile",
-      "Integration of signals into advisor workflow",
+      "Portfolio shelf upload logic",
+      "Alert system tied to uploaded assets and tickers",
+      "Risk and profile-based signal categorization",
+      "Advisor-facing structure for alerts and insights",
     ],
     collaborators: ["CEO", "CTO", "Developer"],
     skills: [
@@ -321,11 +323,11 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Built lifecycle email and newsletter system driving strong engagement and supporting onboarding.",
+      "Built lifecycle email and newsletter systems supporting onboarding, retention, and profile-tailored client communication across the platform.",
     shortResumeVersion:
-      "Built lifecycle email and newsletter system driving strong engagement and supporting onboarding.",
+      "Built lifecycle email and newsletter systems supporting onboarding and retention, including communications with roughly 42% open rates.",
     longResumeVersion:
-      "Owned messaging strategy, content structure, and lifecycle communication flows across onboarding and ongoing engagement touchpoints.",
+      "Owned messaging strategy, content structure, and lifecycle communication flows across onboarding and ongoing engagement touchpoints, including weekly newsletters, profile-aware communication cadence, and advisor-facing content systems built into the platform.",
     context:
       "Users needed clearer communication and ongoing engagement touchpoints.",
     objective:
@@ -339,7 +341,7 @@ export const projects: Project[] = [
       "Lifecycle email sequences",
       "Weekly market newsletters",
       "Advisor-facing communications",
-      "Structured communication tied to product journey",
+      "Automated communication cadence tied to profile type and product journey",
     ],
     collaborators: ["CEO", "Product stakeholders"],
     skills: [
@@ -392,13 +394,13 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Launched",
     oneLineSummary:
-      "Supported development of discovery survey funnel used by end users to generate behavioral profiles.",
+      "Supported the early B2C discovery funnel and MyFinliti beta experience used to generate behavioral profiles and test consumer-facing product direction.",
     shortResumeVersion:
-      "Supported development of discovery survey funnel used by end users to generate behavioral profiles.",
+      "Supported the B2C discovery survey funnel and MyFinliti beta experience used to generate behavioral profiles at scale.",
     longResumeVersion:
-      "Owned survey experience, report framing, and messaging clarity for a scalable discovery funnel used to generate behavioral profiles.",
+      "Owned survey experience, report framing, and messaging clarity for Finliti's early B2C funnel, including the MyFinliti beta and Finlitiverse concept direction, before the company shifted more heavily toward the B2B advisor platform.",
     context:
-      "Finliti required a scalable entry point for new users.",
+      "Finliti initially tested a more consumer-facing entry point through MyFinliti and Finlitiverse concepts before prioritizing the B2B advisor platform.",
     objective:
       "Create an accessible and engaging user onboarding funnel.",
     ownership: [
@@ -417,8 +419,8 @@ export const projects: Project[] = [
     outcomes: ["1,000+ completed discovery surveys"],
     metrics: [
       { label: "Completions", value: "1,000+" },
+      { label: "Beta users", value: "~500" },
       { label: "Channel", value: "B2C discovery" },
-      { label: "State", value: "Active" },
     ],
     tags: [
       "Funnel / Product Experience",
@@ -452,15 +454,15 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Helped transition Finliti from pre-revenue startup to a revenue-generating platform with advisor and enterprise clients.",
+      "Helped move Finliti from pre-revenue startup operations to a more structured B2B platform with advisors, firms, and enterprise-ready workflows.",
     shortResumeVersion:
-      "Helped transition Finliti from pre-revenue startup to a revenue-generating platform with advisor and enterprise clients.",
+      "Helped transition Finliti from pre-revenue startup operations to a more structured B2B platform with advisor and firm adoption.",
     longResumeVersion:
-      "Supported product readiness, onboarding, and client-facing execution as Finliti moved from an experimental stage to a commercial product with paying advisors and firms.",
+      "Supported product readiness, onboarding, and client-facing execution as Finliti moved from experimental B2C and pilot workflows to a more commercial B2B platform with advisor onboarding, annual plan structure, enterprise conversations, and more repeatable delivery systems.",
     context:
-      "Company was moving from experimental stage to commercial product.",
+      "The company was shifting from pre-seed experimentation and manual pilot delivery toward a more productized B2B platform with paying advisors, firm relationships, and enterprise-facing requirements.",
     objective:
-      "Support product readiness and onboarding for paying clients.",
+      "Support product readiness, client onboarding, and delivery systems that could hold up for paying advisors and firms.",
     ownership: [
       "Onboarding readiness",
       "Product presentation",
@@ -476,13 +478,15 @@ export const projects: Project[] = [
     ],
     tools: ["Client onboarding workflows", "Product presentation", "Advisor delivery process"],
     outcomes: [
-      "Growth from 0 clients to ~10 advisors plus multiple firms",
-      "Supported early enterprise adoption",
+      "Supported growth from 0 clients/revenue to ~10 advisors across ~4 firms",
+      "Helped turn manual pilot delivery into a more scalable platform model",
+      "Supported paid pilot delivery through monthly and annual plan structure",
+      "Supported early enterprise and annual-plan readiness",
     ],
     metrics: [
       { label: "Advisor growth", value: "~10 advisors" },
-      { label: "Client base", value: "Multiple firms" },
-      { label: "Stage shift", value: "Pre-revenue to active" },
+      { label: "Pilot firms", value: "~4 paid firms" },
+      { label: "Pricing", value: "$300/mo or $3,000/yr" },
     ],
     tags: [
       "Product Rollout / Growth",

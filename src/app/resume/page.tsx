@@ -29,7 +29,7 @@ export default function ResumePage() {
       role: "Product & Content Lead",
       timeline: "2023 - Present",
       summary:
-        "Led onboarding systems, dashboard organization, rollout support, CRM-connected workflow planning, and user-facing product structure across Finliti's advisor platform.",
+        "Led onboarding redesign, dashboard organization, rollout support, CRM-connected workflow planning, and user-facing product structure across Finliti's advisor platform, helping move advisor setup from a manual pilot workflow to a paid self-serve platform used by ~10 active advisors across ~4 firms.",
       relatedProjects: [
         "advisor-onboarding-system-transformation",
         "crm-behavioral-profile-integration",
@@ -67,8 +67,8 @@ export default function ResumePage() {
             Product and content lead with hands-on experience across onboarding,
             implementation, dashboard structure, lifecycle communication, and
             rollout support inside a startup fintech environment. Strongest where
-            evolving work needs to be turned into something clearer, more usable,
-            and easier to operate.
+            fragmented manual work needs to be turned into clearer, more usable,
+            and more scalable product systems.
           </p>
         </div>
         <div className="rounded-[1.25rem] border border-black/10 bg-white p-7">
