@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 import { ProjectCard } from "@/components/project-card";
 import { Project } from "@/types/projects";
@@ -26,11 +26,10 @@ export function CategoryArchive({
   defaultView = "list",
 }: CategoryArchiveProps) {
   const pathname = usePathname();
-  const router = useRouter();
   const searchParams = useSearchParams();
   const view = searchParams.get("view") === "grid" ? "grid" : defaultView;
 
-  const setView = (nextView: "list" | "grid") => {
+  const buildViewHref = (nextView: "list" | "grid") => {
     const nextParams = new URLSearchParams(searchParams.toString());
 
     if (nextView === defaultView) {
@@ -40,9 +39,7 @@ export function CategoryArchive({
     }
 
     const nextQuery = nextParams.toString();
-    router.replace(nextQuery ? `${pathname}?${nextQuery}` : pathname, {
-      scroll: false,
-    });
+    return nextQuery ? `${pathname}?${nextQuery}` : pathname;
   };
 
   return (
@@ -61,9 +58,8 @@ export function CategoryArchive({
           </div>
           <div className="flex items-center gap-3">
             <div className="flex border border-black/10 bg-white">
-              <button
-                type="button"
-                onClick={() => setView("list")}
+              <Link
+                href={buildViewHref("list")}
                 className={`px-4 py-2 text-sm transition ${
                   view === "list"
                     ? "bg-black text-white"
@@ -71,10 +67,9 @@ export function CategoryArchive({
                 }`}
               >
                 List
-              </button>
-              <button
-                type="button"
-                onClick={() => setView("grid")}
+              </Link>
+              <Link
+                href={buildViewHref("grid")}
                 className={`border-l border-black/10 px-4 py-2 text-sm transition ${
                   view === "grid"
                     ? "bg-black text-white"
@@ -82,7 +77,7 @@ export function CategoryArchive({
                 }`}
               >
                 Grid
-              </button>
+              </Link>
             </div>
             {linkHref && linkLabel ? (
               <Link
