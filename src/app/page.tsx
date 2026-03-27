@@ -96,7 +96,7 @@ export default function HomePage() {
                           ? "/creative-content"
                           : "/film-production"
                   }
-                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white"
                 >
                   Open
                 </Link>

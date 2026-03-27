@@ -72,8 +72,8 @@ export function FilterBar({
             href={buildViewHref("list")}
             className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
               values.view === "list"
-                ? "bg-black text-white hover:text-white"
-                : "text-stone-600 hover:text-black"
+                ? "bg-black text-white hover:text-white focus:text-white active:text-white"
+                : "text-stone-600 hover:text-black focus:text-black active:text-black"
             }`}
           >
             List
@@ -82,8 +82,8 @@ export function FilterBar({
             href={buildViewHref("grid")}
             className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
               values.view === "grid"
-                ? "bg-black text-white hover:text-white"
-                : "text-stone-600 hover:text-black"
+                ? "bg-black text-white hover:text-white focus:text-white active:text-white"
+                : "text-stone-600 hover:text-black focus:text-black active:text-black"
             }`}
           >
             Grid
