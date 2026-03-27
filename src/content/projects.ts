@@ -975,10 +975,9 @@ export const projects: Project[] = [
     audience: "Production teams and audiences",
     scopeLevel: "External / Production",
     coverImage: {
-      src: "/project-images/film/byeeee-poster.png",
-      alt: "Byeeee poster artwork.",
+      src: "/project-images/film/byeeee-billboard.png",
+      alt: "Byeeee billboard artwork over a tree canopy.",
       fit: "cover",
-      position: "center top",
     },
     galleryImages: [
       {
