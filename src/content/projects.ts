@@ -98,7 +98,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Expanded the product from a survey-and-report workflow into a broader advisor platform with a unified dashboard, profiles, backtesting, portfolio tools, alerts, and AI-led features.",
+      "Expanded the product from a survey-and-report workflow into a unified advisor platform with dashboard, profile, backtesting, portfolio, alerts, newsletter, and AI surfaces.",
     shortResumeVersion:
       "Helped evolve the product from a simple survey/report tool into a multi-feature advisor platform with a centralized dashboard.",
     longResumeVersion:
@@ -145,9 +145,9 @@ export const projects: Project[] = [
       "Created a more usable ongoing workflow for advisors and firms",
     ],
     metrics: [
-      { label: "Product state", value: "Centralized platform" },
-      { label: "Live modules", value: "Survey, profiles, alerts, backtests, AI" },
-      { label: "Mode", value: "Advisor workspace" },
+      { label: "Platform shift", value: "Report flow to advisor workspace" },
+      { label: "Live modules", value: "7+ integrated surfaces" },
+      { label: "Use model", value: "Centralized advisor dashboard" },
     ],
     tags: [
       "Product Build / Dashboard / UX",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Defined how behavioral profile data should move into CRM workflows so advisors could use client personality insights inside day-to-day practice.",
+      "Defined how behavioral profile data should move into CRM and Pulse workflows so advisors could use client personality insights inside day-to-day practice.",
     shortResumeVersion:
       "Defined workflow logic for exporting behavioral profile data into CRM environments for advisor use.",
     longResumeVersion:
@@ -217,9 +217,9 @@ export const projects: Project[] = [
       "Moved profile outputs closer to day-to-day advisor action",
     ],
     metrics: [
-      { label: "Integration", value: "CRM workflows" },
-      { label: "Data type", value: "Behavioral profiles" },
-      { label: "Status", value: "Live / evolving" },
+      { label: "Workflow surfaces", value: "CRM + Pulse" },
+      { label: "Data type", value: "Behavioral profile exports" },
+      { label: "Status", value: "Live and evolving" },
     ],
     tags: [
       "Systems Integration / CRM",
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Prototype",
     oneLineSummary:
-      "Helped structure a market-alert workflow connecting uploaded asset shelves, portfolio data, and investor profile logic into ongoing advisor signals.",
+      "Helped structure a market-alert workflow connecting CSV asset shelves, portfolio data, and investor profile logic into ongoing advisor signals.",
     shortResumeVersion:
       "Helped structure a market-alert workflow connecting portfolio data and investor profile logic into ongoing advisor signals.",
     longResumeVersion:
@@ -287,11 +287,12 @@ export const projects: Project[] = [
     outcomes: [
       "Shifted product toward ongoing engagement vs one-time reports",
       "Added continuous advisor utility",
+      "Connected uploaded portfolio shelves to profile-aware alert logic",
     ],
     metrics: [
-      { label: "Value model", value: "Ongoing engagement" },
-      { label: "Signal base", value: "Portfolio + profile" },
-      { label: "Stage", value: "Prototype" },
+      { label: "Input model", value: "CSV portfolio shelves" },
+      { label: "Signal base", value: "Portfolio + profile logic" },
+      { label: "Stage", value: "Prototype / live workflow" },
     ],
     tags: [
       "Product Feature / Alerts / Portfolio",
@@ -358,11 +359,12 @@ export const projects: Project[] = [
     outcomes: [
       "Achieved ~42% open rate",
       "Improved ongoing user engagement",
+      "Extended product communication beyond onboarding into recurring touchpoints",
     ],
     metrics: [
       { label: "Open rate", value: "~42%" },
       { label: "Cadence", value: "Weekly newsletters" },
-      { label: "Focus", value: "Engagement + onboarding" },
+      { label: "System", value: "Lifecycle + newsletter engine" },
     ],
     tags: [
       "Lifecycle / Communication / Engagement",
@@ -425,7 +427,7 @@ export const projects: Project[] = [
     metrics: [
       { label: "Completions", value: "1,000+" },
       { label: "Beta users", value: "~500" },
-      { label: "Channel", value: "B2C discovery" },
+      { label: "Channel", value: "B2C discovery funnel" },
     ],
     tags: [
       "Funnel / Product Experience",
@@ -459,7 +461,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Helped move Finliti from pre-revenue startup operations to a more structured B2B platform with advisors, firms, and enterprise-ready workflows.",
+      "Helped move Finliti from pre-revenue startup operations to a more structured B2B platform with paid pilots, firm onboarding, and enterprise-ready workflows.",
     shortResumeVersion:
       "Helped transition Finliti from pre-revenue startup operations to a more structured B2B platform with advisor and firm adoption.",
     longResumeVersion:
@@ -489,8 +491,8 @@ export const projects: Project[] = [
       "Supported early enterprise and annual-plan readiness",
     ],
     metrics: [
-      { label: "Advisor growth", value: "~10 advisors" },
-      { label: "Pilot firms", value: "~4 paid firms" },
+      { label: "Active advisors", value: "~10" },
+      { label: "Paid pilot firms", value: "~4" },
       { label: "Pricing", value: "$300/mo or $3,000/yr" },
     ],
     tags: [
@@ -527,11 +529,11 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Coordinated intern contributions across product features and ongoing development.",
+      "Coordinated 1-2 interns across product features and ongoing development while aligning work with a small startup delivery team.",
     shortResumeVersion:
       "Coordinated intern contributions across product features and ongoing development.",
     longResumeVersion:
-      "Managed task coordination, prioritization, and review across intern-supported product workstreams to keep evolving development aligned.",
+      "Managed task coordination, prioritization, and review across 1-2 intern-supported workstreams while aligning delivery with the CEO, CTO, and developer.",
     context:
       "Feature work required ongoing coordination and review across intern-supported product development.",
     objective:
@@ -547,9 +549,9 @@ export const projects: Project[] = [
     tools: ["Task coordination", "Async review", "Product feature support"],
     outcomes: [],
     metrics: [
-      { label: "Work type", value: "Feature support" },
-      { label: "Team model", value: "Intern coordination" },
-      { label: "Status", value: "Ongoing" },
+      { label: "Interns", value: "1-2" },
+      { label: "Core team", value: "CEO, CTO, developer" },
+      { label: "Focus", value: "Feature support + coordination" },
     ],
     tags: [
       "Team Coordination",
@@ -582,7 +584,7 @@ export const projects: Project[] = [
     timelineEnd: "2023-12",
     status: "Strategic",
     oneLineSummary:
-      "Participated in RBC FinSec incubator and engaged with fintech and banking stakeholders.",
+      "Represented Finliti in the RBC FinSec incubator and engaged with fintech and banking stakeholders during early growth.",
     shortResumeVersion:
       "Participated in RBC FinSec incubator and engaged with fintech and banking stakeholders.",
     longResumeVersion:
@@ -609,7 +611,7 @@ export const projects: Project[] = [
       "Supported credibility during early growth stage",
     ],
     metrics: [
-      { label: "Program", value: "RBC FinSec" },
+      { label: "Program", value: "1 RBC FinSec cohort" },
       { label: "Timeline", value: "2023" },
       { label: "Focus", value: "Stakeholder engagement" },
     ],
@@ -643,7 +645,7 @@ export const projects: Project[] = [
     timelineEnd: "2022-11",
     status: "Launched",
     oneLineSummary:
-      "Contributed to product design and UX improvements for medsEXPERT Pharmacy.",
+      "Contributed to product design and UX improvement work for medsEXPERT Pharmacy, helping clarify user-facing flows in a healthcare context.",
     shortResumeVersion:
       "Contributed to product design and UX improvements for medsEXPERT Pharmacy.",
     longResumeVersion:
@@ -670,9 +672,9 @@ export const projects: Project[] = [
       "Supported clearer UX direction",
     ],
     metrics: [
-      { label: "Company", value: "medsEXPERT Pharmacy" },
-      { label: "Timeline", value: "2022" },
-      { label: "Focus", value: "Product UX" },
+      { label: "Industry", value: "Healthcare / Pharmacy" },
+      { label: "Timeline", value: "Aug-Nov 2022" },
+      { label: "Focus", value: "Product UX improvement" },
     ],
     tags: ["Product / UX", "Product design", "UX improvement"],
     featured: false,
@@ -694,7 +696,7 @@ export const projects: Project[] = [
     timelineEnd: "2022-09",
     status: "Strategic",
     oneLineSummary:
-      "Supported development of a Gen Z-focused news platform through UX research and product-direction work.",
+      "Supported development of a Gen Z-focused news platform through UX research, audience insight work, and product-direction support.",
     shortResumeVersion:
       "Supported development of a Gen Z-focused news platform through UX research and product-direction work.",
     longResumeVersion:
@@ -722,8 +724,8 @@ export const projects: Project[] = [
     ],
     metrics: [
       { label: "Audience", value: "Gen Z" },
-      { label: "Timeline", value: "2021–2022" },
-      { label: "Focus", value: "UX research" },
+      { label: "Timeline", value: "2021-2022" },
+      { label: "Focus", value: "UX research + product direction" },
     ],
     tags: ["Product / UX", "UX research", "Audience insight"],
     featured: false,
@@ -745,7 +747,7 @@ export const projects: Project[] = [
     timelineEnd: "2023-04",
     status: "Launched",
     oneLineSummary:
-      "Developed investor reports, onboarding content, product explainers, and lifecycle messaging for a behavioral finance platform.",
+      "Developed investor reports, onboarding content, product explainers, and lifecycle messaging that made a behavioral finance platform easier to understand and use.",
     shortResumeVersion:
       "Developed investor reports, onboarding content, product explainers, and lifecycle messaging for Finliti.",
     longResumeVersion:
@@ -777,10 +779,11 @@ export const projects: Project[] = [
     outcomes: [
       "Improved product clarity for new and existing users",
       "Helped define brand voice across product touchpoints",
+      "Built content systems spanning reports, onboarding, and lifecycle flows",
     ],
     metrics: [
-      { label: "Timeline", value: "2021–2023" },
-      { label: "Focus", value: "Content systems" },
+      { label: "Coverage", value: "Reports, onboarding, lifecycle" },
+      { label: "Timeline", value: "2021-2023" },
       { label: "Company", value: "Finliti" },
     ],
     tags: [
@@ -875,7 +878,7 @@ export const projects: Project[] = [
     timelineEnd: "2025-12",
     status: "Launched",
     oneLineSummary:
-      "Edited promotional and educational videos and created motion-led product walkthrough visuals.",
+      "Edited promotional and educational videos and created motion-led product walkthrough visuals for a multi-year client engagement.",
     shortResumeVersion:
       "Edited promotional and educational videos and created motion-led product walkthrough visuals.",
     longResumeVersion:
@@ -909,9 +912,9 @@ export const projects: Project[] = [
       "Improved visual clarity around product communication",
     ],
     metrics: [
-      { label: "Timeline", value: "2023–2025" },
-      { label: "Focus", value: "Video + motion" },
-      { label: "Mode", value: "Contract" },
+      { label: "Timeline", value: "2023-2025" },
+      { label: "Focus", value: "Video, motion, walkthroughs" },
+      { label: "Mode", value: "Contract engagement" },
     ],
     tags: ["Creative / Content", "Video", "Motion graphics", "Creative lead"],
     featured: false,
@@ -938,7 +941,7 @@ export const projects: Project[] = [
     timelineEnd: "2024-12",
     status: "Launched",
     oneLineSummary:
-      "Served as co-producer on the feature film Byeeee, supporting production execution and delivery.",
+      "Served as co-producer on the feature film Byeeee, supporting production execution, coordination, and delivery across a full feature timeline.",
     shortResumeVersion:
       "Co-produced the feature film Byeeee, supporting production execution and delivery.",
     longResumeVersion:
@@ -970,7 +973,7 @@ export const projects: Project[] = [
       "Strengthened delivery discipline in a film environment",
     ],
     metrics: [
-      { label: "Format", value: "Feature film" },
+      { label: "Format", value: "1 feature film" },
       { label: "Year", value: "2024" },
       { label: "Role", value: "Co-Producer" },
     ],
@@ -1012,7 +1015,7 @@ export const projects: Project[] = [
     timelineEnd: "2023-12",
     status: "Launched",
     oneLineSummary:
-      "Worked as 2nd Assistant Director on Get Hooked, supporting timing, communication, and on-set coordination.",
+      "Worked as 2nd Assistant Director on Get Hooked, supporting timing, communication, and on-set coordination for a TV production.",
     shortResumeVersion:
       "Worked as 2nd Assistant Director on Get Hooked, supporting timing, communication, and on-set coordination.",
     longResumeVersion:
@@ -1044,7 +1047,7 @@ export const projects: Project[] = [
       "Built execution discipline in a high-variance TV environment",
     ],
     metrics: [
-      { label: "Format", value: "TV" },
+      { label: "Format", value: "TV series" },
       { label: "Platform", value: "OUTtv / Amazon" },
       { label: "Role", value: "2nd AD" },
     ],
@@ -1068,7 +1071,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Strategic",
     oneLineSummary:
-      "Created and wrote Finding Green, a CMF/IPF-funded development project.",
+      "Created and wrote Finding Green, a CMF/IPF-funded development project advanced through formal funding support.",
     shortResumeVersion:
       "Created and wrote Finding Green, a CMF/IPF-funded development project.",
     longResumeVersion:
@@ -1101,7 +1104,7 @@ export const projects: Project[] = [
       "Established a strong creative foundation for the work",
     ],
     metrics: [
-      { label: "Format", value: "Development" },
+      { label: "Format", value: "TV / film development" },
       { label: "Funding", value: "CMF / IPF" },
       { label: "Role", value: "Creator / Writer" },
     ],
@@ -1130,7 +1133,7 @@ export const projects: Project[] = [
     timelineEnd: "2020-12",
     status: "Launched",
     oneLineSummary:
-      "Worked in the camera department as 2nd Assistant Camera on Property Brothers: Forever Home.",
+      "Worked in the camera department as 2nd Assistant Camera on Property Brothers: Forever Home, supporting technical readiness and on-set flow.",
     shortResumeVersion:
       "Worked in the camera department as 2nd Assistant Camera on Property Brothers: Forever Home.",
     longResumeVersion:
@@ -1161,7 +1164,7 @@ export const projects: Project[] = [
       "Built technical and coordination discipline on set",
     ],
     metrics: [
-      { label: "Format", value: "TV" },
+      { label: "Format", value: "TV series" },
       { label: "Department", value: "Camera" },
       { label: "Role", value: "2nd AC" },
     ],
@@ -1242,7 +1245,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Ongoing",
     oneLineSummary:
-      "Managed digital and creative projects from concept through delivery for freelance clients and collaborators.",
+      "Managed digital and creative projects from concept through delivery for freelance clients, collaborators, and ongoing creative work.",
     shortResumeVersion:
       "Managed digital and creative projects from concept through delivery for freelance clients and collaborators.",
     longResumeVersion:
@@ -1276,7 +1279,7 @@ export const projects: Project[] = [
     ],
     metrics: [
       { label: "Mode", value: "Freelance" },
-      { label: "Focus", value: "Client delivery" },
+      { label: "Focus", value: "Client delivery + documentation" },
       { label: "Status", value: "Ongoing" },
     ],
     tags: ["Project Management", "Freelance", "Client delivery", "Documentation"],
