@@ -64,7 +64,7 @@ export function CategoryArchive({
                 href={buildViewHref("list")}
                 className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
                   view === "list"
-                    ? "bg-black text-white hover:text-white focus:text-white active:text-white"
+                    ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
                     : "text-stone-600 hover:text-black focus:text-black active:text-black"
                 }`}
               >
@@ -74,7 +74,7 @@ export function CategoryArchive({
                 href={buildViewHref("grid")}
                 className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
                   view === "grid"
-                    ? "bg-black text-white hover:text-white focus:text-white active:text-white"
+                    ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
                     : "text-stone-600 hover:text-black focus:text-black active:text-black"
                 }`}
               >
@@ -84,7 +84,7 @@ export function CategoryArchive({
             {linkHref && linkLabel ? (
               <Link
                 href={linkHref}
-                className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white"
+                className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:!text-white focus:bg-black focus:!text-white active:bg-black active:!text-white"
               >
                 {linkLabel}
               </Link>

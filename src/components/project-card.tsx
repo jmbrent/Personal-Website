@@ -20,8 +20,8 @@ export function ProjectCard({
 
   if (view === "list") {
     return (
-      <article className="group grid gap-5 border-t border-black pt-5 transition md:grid-cols-[16rem_minmax(0,1fr)] md:items-start">
-        <ProjectCover project={project} className="aspect-[4/3]" />
+      <article className="group grid gap-5 border border-black/10 bg-white p-5 transition hover:border-black md:grid-cols-[18rem_minmax(0,1fr)] md:items-start md:gap-6">
+        <ProjectCover project={project} className="aspect-[4/3] md:sticky md:top-28" />
         <div className="flex flex-1 flex-col gap-5">
           <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
             <span>{project.projectType}</span>

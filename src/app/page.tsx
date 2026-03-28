@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 
+import { ProjectCard } from "@/components/project-card";
 import { getProjects } from "@/lib/projects";
 
 const categoryOrder = [
@@ -96,35 +97,18 @@ export default function HomePage() {
                           ? "/creative-content"
                           : "/film-production"
                   }
-                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:text-white focus:bg-black focus:text-white active:bg-black active:text-white"
+                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:!text-white focus:bg-black focus:!text-white active:bg-black active:!text-white"
                 >
                   Open
                 </Link>
               </div>
-              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-6">
                 {group.projects.map((project) => (
-                  <Link
+                  <ProjectCard
                     key={project.id}
-                    href={`/work/${project.slug}`}
-                    className="group flex min-h-[13rem] flex-col justify-between border border-black/10 bg-white p-4 transition hover:border-black"
-                  >
-                    <div className="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
-                      <span>{project.projectType}</span>
-                      <span className="h-1 w-1 bg-stone-300" />
-                      <span>{project.company}</span>
-                    </div>
-                    <div className="mt-6">
-                      <h3 className="text-[1.45rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
-                        {project.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-6 text-stone-600">
-                        {project.oneLineSummary}
-                      </p>
-                    </div>
-                    <div className="mt-6 border-t border-black/10 pt-3 text-xs uppercase tracking-[0.14em] text-stone-500">
-                      {project.role}
-                    </div>
-                  </Link>
+                    project={project}
+                    view="list"
+                  />
                 ))}
               </div>
             </section>
