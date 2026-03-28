@@ -17,6 +17,10 @@ export function ProjectCard({
     project.timelineStart,
     project.timelineEnd,
   );
+  const displayTitle =
+    project.category === "Project Management"
+      ? project.shortTitle
+      : project.title;
 
   if (view === "list") {
     return (
@@ -37,7 +41,7 @@ export function ProjectCard({
                   href={`/work/${project.slug}`}
                   className="transition group-hover:text-stone-700"
                 >
-                  {project.title}
+                  {displayTitle}
                 </Link>
               </h2>
               <p className="mt-2 text-base leading-7 text-stone-600">
@@ -104,7 +108,7 @@ export function ProjectCard({
                 href={`/work/${project.slug}`}
                 className="transition group-hover:text-stone-700"
               >
-                {project.title}
+                {displayTitle}
               </Link>
             </h2>
             <p className="mt-2 text-base leading-7 text-stone-600">
