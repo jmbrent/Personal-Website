@@ -1,4 +1,5 @@
 import { projects } from "@/content/projects";
+import { Project } from "@/types/projects";
 
 const monthFormatter = new Intl.DateTimeFormat("en-US", {
   month: "long",
@@ -19,6 +20,17 @@ export function getProjects() {
 
     return right.timelineStart.localeCompare(left.timelineStart);
   });
+}
+
+export function projectMatchesCategory(project: Project, category: string) {
+  return (
+    project.category === category ||
+    project.secondaryCategories?.includes(category) === true
+  );
+}
+
+export function getProjectsByCategory(category: string) {
+  return getProjects().filter((project) => projectMatchesCategory(project, category));
 }
 
 export function getProjectBySlug(slug: string) {

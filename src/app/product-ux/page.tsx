@@ -1,14 +1,12 @@
 import { CategoryArchive } from "@/components/category-archive";
-import { getProjects } from "@/lib/projects";
+import { getProjectsByCategory } from "@/lib/projects";
 
 export const metadata = {
   title: "Product / UX",
 };
 
 export default function ProductUxPage() {
-  const projects = getProjects().filter(
-    (project) => project.category === "Product / UX",
-  );
+  const projects = getProjectsByCategory("Product / UX");
 
   return (
     <CategoryArchive

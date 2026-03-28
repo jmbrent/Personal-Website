@@ -28,6 +28,7 @@ export type Project = {
   title: string;
   shortTitle: string;
   category: string;
+  secondaryCategories?: string[];
   projectType: string;
   company: string;
   client?: string;

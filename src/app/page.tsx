@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 
 import { ProjectCard } from "@/components/project-card";
-import { getProjects } from "@/lib/projects";
+import { getProjects, projectMatchesCategory } from "@/lib/projects";
 
 const categoryOrder = [
   "Project Management",
@@ -38,7 +38,7 @@ export default function HomePage() {
     .map((category) => ({
       category,
       projects: projects
-        .filter((project) => project.category === category)
+        .filter((project) => projectMatchesCategory(project, category))
         .slice(0, 4),
     }))
     .filter((entry) => entry.projects.length > 0);

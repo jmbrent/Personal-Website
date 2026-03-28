@@ -1,14 +1,12 @@
 import { CategoryArchive } from "@/components/category-archive";
-import { getProjects } from "@/lib/projects";
+import { getProjectsByCategory } from "@/lib/projects";
 
 export const metadata = {
   title: "Creative / Content",
 };
 
 export default function CreativeContentPage() {
-  const projects = getProjects().filter(
-    (project) => project.category === "Creative / Content",
-  );
+  const projects = getProjectsByCategory("Creative / Content");
 
   return (
     <CategoryArchive

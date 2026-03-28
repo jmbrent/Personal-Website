@@ -1,14 +1,12 @@
 import { CategoryArchive } from "@/components/category-archive";
-import { getProjects } from "@/lib/projects";
+import { getProjectsByCategory } from "@/lib/projects";
 
 export const metadata = {
   title: "Film / TV",
 };
 
 export default function FilmProductionPage() {
-  const projects = getProjects().filter(
-    (project) => project.category === "Film / Production",
-  );
+  const projects = getProjectsByCategory("Film / Production");
 
   return (
     <CategoryArchive
