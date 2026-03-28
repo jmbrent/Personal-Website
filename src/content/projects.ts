@@ -233,8 +233,9 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / Integration",
     coverImage: {
-      src: "/project-images/pm/crm-dashboard.png",
-      alt: "Finliti client management dashboard used to represent CRM workflow integration.",
+      src: "/project-images/pm/profile-sync-diagram.svg",
+      alt: "Animated workflow diagram showing behavioral profile data moving from Profile to Pulse to CRM.",
+      fit: "cover",
     },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
