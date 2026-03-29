@@ -27,23 +27,24 @@ export function ProjectCard({
       <article className="group grid gap-5 border border-black/10 bg-white p-5 transition hover:border-black md:grid-cols-[18rem_minmax(0,1fr)] md:items-start md:gap-6">
         <ProjectCover project={project} className="aspect-[4/3] md:sticky md:top-28" />
         <div className="flex flex-1 flex-col gap-5">
-          <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
-            <span>{project.projectType}</span>
-            <span className="h-1 w-1 bg-stone-300" />
-            <span>{project.company}</span>
-            <span className="h-1 w-1 bg-stone-300" />
-            <span>{timeline}</span>
-          </div>
+          <p className="text-[11px] uppercase tracking-[0.14em] text-stone-500">
+            <Link
+              href={`/work/${project.slug}`}
+              className="transition group-hover:text-stone-700"
+            >
+              {displayTitle}
+            </Link>
+          </p>
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="max-w-3xl">
               <h2 className="text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
-                <Link
-                  href={`/work/${project.slug}`}
-                  className="transition group-hover:text-stone-700"
-                >
-                  {displayTitle}
-                </Link>
+                {project.projectType}
               </h2>
+              <div className="mt-2 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
+                <span>{project.company}</span>
+                <span className="h-1 w-1 bg-stone-300" />
+                <span>{timeline}</span>
+              </div>
               <p className="mt-2 text-base leading-7 text-stone-600">
                 {project.oneLineSummary}
               </p>
@@ -93,24 +94,25 @@ export function ProjectCard({
         project={project}
         className="mb-5 aspect-[16/10]"
       />
-      <div className="flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
-        <span>{project.projectType}</span>
-        <span className="h-1 w-1 bg-stone-300" />
-        <span>{project.company}</span>
-        <span className="h-1 w-1 bg-stone-300" />
-        <span>{timeline}</span>
-      </div>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-stone-500">
+        <Link
+          href={`/work/${project.slug}`}
+          className="transition group-hover:text-stone-700"
+        >
+          {displayTitle}
+        </Link>
+      </p>
       <div className="mt-6 flex flex-1 flex-col gap-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="max-w-2xl">
             <h2 className="text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
-              <Link
-                href={`/work/${project.slug}`}
-                className="transition group-hover:text-stone-700"
-              >
-                {displayTitle}
-              </Link>
+              {project.projectType}
             </h2>
+            <div className="mt-2 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
+              <span>{project.company}</span>
+              <span className="h-1 w-1 bg-stone-300" />
+              <span>{timeline}</span>
+            </div>
             <p className="mt-2 text-base leading-7 text-stone-600">
               {project.oneLineSummary}
             </p>
