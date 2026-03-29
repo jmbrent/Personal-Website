@@ -402,7 +402,7 @@ export const projects: Project[] = [
     timelineEnd: "Present",
     status: "Launched",
     oneLineSummary:
-      "Supported the early B2C discovery funnel and MyFinliti beta experience used to generate behavioral profiles and test consumer-facing product direction.",
+      "Supported the early B2C discovery funnel, MyFinliti beta, and Finlitiverse education concept used to generate behavioral profiles and test consumer-facing product direction.",
     shortResumeVersion:
       "Supported the B2C discovery survey funnel and MyFinliti beta experience used to generate behavioral profiles at scale.",
     longResumeVersion:
@@ -879,7 +879,7 @@ export const projects: Project[] = [
     timelineEnd: "2025-12",
     status: "Launched",
     oneLineSummary:
-      "Edited promotional and educational videos and created motion-led product walkthrough visuals for a multi-year client engagement.",
+      "Edited 20+ promotional and educational videos and created motion-led product walkthrough visuals for a multi-year client engagement.",
     shortResumeVersion:
       "Edited promotional and educational videos and created motion-led product walkthrough visuals.",
     longResumeVersion:
@@ -913,6 +913,7 @@ export const projects: Project[] = [
       "Improved visual clarity around product communication",
     ],
     metrics: [
+      { label: "Videos", value: "20+" },
       { label: "Timeline", value: "2023-2025" },
       { label: "Focus", value: "Video, motion, walkthroughs" },
       { label: "Mode", value: "Contract engagement" },
@@ -935,7 +936,7 @@ export const projects: Project[] = [
     shortTitle: "Byeeee",
     category: "Film / Production",
     projectType: "Feature Film / Producing",
-    company: "Independent Film",
+    company: "Think/Feel",
     role: "Co-Producer",
     location: "Toronto, ON",
     timelineStart: "2024-01",
@@ -1016,11 +1017,11 @@ export const projects: Project[] = [
     timelineEnd: "2023-12",
     status: "Launched",
     oneLineSummary:
-      "Worked as 2nd Assistant Director on Get Hooked, supporting timing, communication, and on-set coordination for a TV production.",
+      "Worked as 2nd Assistant Director on Get Hooked, supporting call sheets, timing, talent movement, and on-set coordination for an OUTtv / Amazon docuseries.",
     shortResumeVersion:
       "Worked as 2nd Assistant Director on Get Hooked, supporting timing, communication, and on-set coordination.",
     longResumeVersion:
-      "Supported production timing, communication, and on-set coordination as 2nd Assistant Director on Get Hooked for OUTtv / Amazon.",
+      "Supported production timing, call sheets, communication, and on-set coordination as 2nd Assistant Director on Get Hooked, a queer fishing docuseries for OUTtv / Amazon.",
     context:
       "TV production required precise coordination, clear communication, and quick response to shifting on-set needs.",
     objective:
@@ -1031,9 +1032,10 @@ export const projects: Project[] = [
       "Schedule coordination",
     ],
     deliverables: [
+      "Call-sheet execution",
       "Set coordination support",
       "Communication across departments",
-      "Timing support for active production days",
+      "Timing and talent support for active production days",
     ],
     collaborators: ["Director", "Production team", "Cast and crew"],
     skills: [
@@ -1057,6 +1059,23 @@ export const projects: Project[] = [
     industry: "Television / Media",
     audience: "Production teams and audiences",
     scopeLevel: "External / Production",
+    coverImage: {
+      src: "/project-images/film/gethooked-billboard.jpg",
+      alt: "Get Hooked billboard artwork.",
+      fit: "cover",
+    },
+    galleryImages: [
+      {
+        src: "/project-images/film/gethooked-billboard.jpg",
+        alt: "Get Hooked billboard artwork.",
+        fit: "cover",
+      },
+      {
+        src: "/project-images/film/gethooked-poster.png",
+        alt: "Get Hooked poster artwork.",
+        fit: "cover",
+      },
+    ],
   },
   {
     id: "finding-green-development",
@@ -1065,18 +1084,18 @@ export const projects: Project[] = [
     shortTitle: "Finding Green",
     category: "Film / Production",
     projectType: "Development / Writing",
-    company: "Independent Development",
+    company: "Bone Vault Inc.",
     role: "Creator / Writer",
     location: "Toronto, ON",
     timelineStart: "2023-01",
     timelineEnd: "Present",
     status: "Strategic",
     oneLineSummary:
-      "Created and wrote Finding Green, a CMF/IPF-funded development project advanced through formal funding support.",
+      "Created and wrote Finding Green, an optioned CMF/IPF-funded development project that reached early streaming-partner discussions.",
     shortResumeVersion:
       "Created and wrote Finding Green, a CMF/IPF-funded development project.",
     longResumeVersion:
-      "Led early creative development for Finding Green as creator and writer, shaping the concept, written material, and project direction through funded development.",
+      "Led early creative development for Finding Green as creator and writer, shaping the concept, scripts, and pitch materials; secured CMF/IPF development support and advanced into early discussions with KindaTV (Shaftesbury).",
     context:
       "The project required early-stage creative definition, written development, and enough structure to move the concept forward through funding-backed development.",
     objective:
@@ -1089,7 +1108,7 @@ export const projects: Project[] = [
     ],
     deliverables: [
       "Created the project concept",
-      "Developed written material",
+      "Developed scripts and pitch materials",
       "Supported funded development progress",
     ],
     collaborators: ["Development partners", "Creative collaborators"],
@@ -1102,12 +1121,12 @@ export const projects: Project[] = [
     tools: ["Development documents", "Writing workflows"],
     outcomes: [
       "Advanced the project through funded development",
-      "Established a strong creative foundation for the work",
+      "Reached early deal discussion with KindaTV (Shaftesbury)",
     ],
     metrics: [
-      { label: "Format", value: "TV / film development" },
+      { label: "Format", value: "TV / web-series development" },
       { label: "Funding", value: "CMF / IPF" },
-      { label: "Role", value: "Creator / Writer" },
+      { label: "Status", value: "Optioned project" },
     ],
     tags: ["Film / Production", "Development", "Writing", "Creative direction"],
     featured: false,
@@ -1220,11 +1239,12 @@ export const projects: Project[] = [
     outcomes: [
       "Delivered a completed short film",
       "Reached festival selection",
+      "Screened at TIFF, KCFF, and Canada Shorts",
     ],
     metrics: [
       { label: "Format", value: "Short film" },
-      { label: "Status", value: "Festival-selected" },
-      { label: "Role", value: "Writer / Producer / Editor" },
+      { label: "Festivals", value: "TIFF, KCFF, Canada Shorts" },
+      { label: "Status", value: "Award-winning / festival-selected" },
     ],
     tags: ["Film / Production", "Short film", "Writing", "Editing", "Producing"],
     featured: true,
@@ -1291,6 +1311,139 @@ export const projects: Project[] = [
     coverImage: {
       src: "/project-images/pm/client-ops-diagram.svg",
       alt: "Animated client delivery diagram showing brief, build, and handoff workflow.",
+      fit: "cover",
+    },
+  },
+  {
+    id: "next-ai-cohort",
+    slug: "next-ai-cohort",
+    title: "Next AI Cohort",
+    shortTitle: "Next AI",
+    category: "Product / UX",
+    projectType: "AI / Product Strategy",
+    company: "Next AI",
+    role: "Cohort Participant",
+    location: "Toronto, ON",
+    timelineStart: "2023-03",
+    timelineEnd: "2023-09",
+    status: "Strategic",
+    oneLineSummary:
+      "Participated in the Next AI '23 cohort, expanding exposure to AI product thinking, startup strategy, and founder-facing technical conversations.",
+    shortResumeVersion:
+      "Participated in the Next AI '23 cohort, strengthening AI product and startup strategy exposure.",
+    longResumeVersion:
+      "Participated in the Next AI 2023 cohort, building exposure to AI product strategy, startup thinking, and technical founder/operator conversations alongside Finliti's product growth stage.",
+    context:
+      "The cohort provided a structured environment for AI product exposure, startup conversations, and adjacent founder/operator learning.",
+    objective:
+      "Deepen understanding of AI product strategy and early-stage venture ecosystems.",
+    ownership: [
+      "Cohort participation",
+      "AI product exploration",
+      "Startup ecosystem exposure",
+    ],
+    deliverables: [
+      "Cohort participation",
+      "AI/startup learning",
+      "Founder-facing product discussion",
+    ],
+    collaborators: ["Cohort members", "Mentors", "Startup operators"],
+    skills: ["AI product strategy", "Startup ecosystems", "Product thinking"],
+    tools: ["Cohort workshops", "AI product discussions"],
+    outcomes: ["Expanded AI product and startup strategy exposure"],
+    metrics: [
+      { label: "Program", value: "Next AI '23" },
+      { label: "Timeline", value: "2023" },
+      { label: "Focus", value: "AI + startup strategy" },
+    ],
+    tags: ["Product / UX", "AI", "Startup strategy", "Cohort"],
+    featured: false,
+    industry: "AI / Startups",
+    audience: "Founders and product operators",
+    scopeLevel: "External / Cohort",
+  },
+  {
+    id: "gold-link-documentary-research",
+    slug: "gold-link-documentary-research",
+    title: "Gold Link Documentary Research",
+    shortTitle: "Gold Link",
+    category: "Creative / Content",
+    projectType: "Research / Story Development",
+    company: "Gold Link Productions Inc.",
+    role: "Research Assistant",
+    location: "Toronto, ON",
+    timelineStart: "2018-04",
+    timelineEnd: "2018-10",
+    status: "Launched",
+    oneLineSummary:
+      "Supported documentary story development through structured research and editorial preparation.",
+    shortResumeVersion:
+      "Supported documentary story development and research for Gold Link Productions.",
+    longResumeVersion:
+      "Worked as a research assistant supporting documentary story development, source gathering, and early editorial preparation work.",
+    context:
+      "Documentary development required research discipline and organized support for story shaping.",
+    objective:
+      "Support documentary development with accurate research and useful source material.",
+    ownership: ["Research support", "Story development assistance", "Source gathering"],
+    deliverables: ["Documentary research", "Story support materials", "Research organization"],
+    collaborators: ["Producers", "Story team"],
+    skills: ["Research", "Story development", "Editorial support"],
+    tools: ["Research workflows", "Documentation"],
+    outcomes: ["Supported stronger documentary development groundwork"],
+    metrics: [
+      { label: "Format", value: "Documentary development" },
+      { label: "Timeline", value: "2018" },
+      { label: "Role", value: "Research Assistant" },
+    ],
+    tags: ["Creative / Content", "Research", "Story development", "Documentary"],
+    featured: false,
+    industry: "Documentary / Media",
+    audience: "Production and editorial teams",
+    scopeLevel: "External / Research",
+  },
+  {
+    id: "royal-lepage-executive-assistant",
+    slug: "royal-lepage-executive-assistant",
+    title: "Royal LePage Executive Support",
+    shortTitle: "Royal LePage",
+    category: "Project Management",
+    projectType: "Operations / Executive Support",
+    company: "Royal LePage Partners Realty",
+    role: "Executive Assistant",
+    location: "Kingston, ON",
+    timelineStart: "2014-08",
+    timelineEnd: "2015-08",
+    status: "Launched",
+    oneLineSummary:
+      "Supported executive operations, scheduling, and administrative coordination in a real-estate brokerage environment.",
+    shortResumeVersion:
+      "Provided executive support and operations coordination for a busy real-estate brokerage office.",
+    longResumeVersion:
+      "Worked in executive support and office coordination, handling scheduling, communication, and administrative workflow in a client-facing real-estate setting.",
+    context:
+      "The role required dependable coordination, communication, and administrative follow-through in a high-touch service business.",
+    objective:
+      "Keep executive and office operations moving smoothly through organized support.",
+    ownership: ["Executive support", "Scheduling", "Administrative coordination"],
+    deliverables: ["Scheduling support", "Office coordination", "Administrative workflow management"],
+    collaborators: ["Executives", "Office staff", "Clients"],
+    skills: ["Operations", "Scheduling", "Administrative support", "Communication"],
+    tools: ["Office workflows", "Scheduling systems"],
+    outcomes: ["Supported consistent office and executive operations"],
+    metrics: [
+      { label: "Industry", value: "Real estate" },
+      { label: "Timeline", value: "2014-2015" },
+      { label: "Role", value: "Executive Assistant" },
+    ],
+    tags: ["Project Management", "Operations", "Executive support", "Scheduling"],
+    featured: false,
+    industry: "Real Estate / Operations",
+    audience: "Executives, office staff, clients",
+    scopeLevel: "Internal / Operations",
+    coverImage: {
+      src: "/project-images/pm/client-ops-diagram.svg",
+      alt: "Animated workflow diagram representing operations and executive support.",
       fit: "cover",
     },
   },
