@@ -1,0 +1,19 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#FFF2EE"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}.mail{animation:fade 5s ease-in-out infinite}@keyframes fade{0%,100%{opacity:.18}30%{opacity:1}}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="210" y="290" class="k l">Message Engine</text><text x="210" y="360" class="k t">Cadence</text><text x="210" y="412" class="k s">Profile-aware lifecycle + newsletter flow</text>
+  <rect class="mail" x="210" y="520" width="280" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect class="mail" x="660" y="520" width="280" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2" style="animation-delay:.7s"/>
+  <rect class="mail" x="1110" y="520" width="280" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2" style="animation-delay:1.4s"/>
+  <path d="M350 610H800M800 610H1250" stroke="#FFC8BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M260 580L350 640L440 580" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="5" fill="none"/>
+  <path d="M710 580L800 640L890 580" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="5" fill="none"/>
+  <path d="M1160 580L1250 640L1340 580" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="5" fill="none"/>
+  <text x="250" y="760" class="k l">Welcome</text><text x="700" y="760" class="k l">Nurture</text><text x="1150" y="760" class="k l">Weekly</text>
+  <circle cx="350" cy="610" r="12" fill="#0A0A0A"><animate attributeName="cx" values="350;800;1250;350" dur="5.6s" repeatCount="indefinite"/></circle>
+</svg>

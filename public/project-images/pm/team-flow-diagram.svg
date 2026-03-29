@@ -1,0 +1,18 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#F7FBFF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="220" y="300" class="k l">Team Flow</text><text x="220" y="370" class="k t">Align</text><text x="220" y="422" class="k s">Interns + core startup team</text>
+  <rect x="240" y="520" width="180" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="500" y="520" width="180" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="760" y="520" width="180" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="1020" y="520" width="180" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="1280" y="520" width="180" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <text x="282" y="620" class="k l">CEO</text><text x="542" y="620" class="k l">CTO</text><text x="790" y="620" class="k l">Dev</text><text x="1050" y="620" class="k l">Intern</text><text x="1308" y="620" class="k l">Intern</text>
+  <path d="M420 610H500M680 610H760M940 610H1020M1200 610H1280" stroke="#CFE0FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="420" cy="610" r="12" fill="#0A0A0A"><animate attributeName="cx" values="420;680;940;1200;420" dur="6s" repeatCount="indefinite"/></circle>
+</svg>

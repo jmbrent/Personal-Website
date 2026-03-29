@@ -1,0 +1,20 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#EEF4FF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}.dot{animation:p 4.8s ease-in-out infinite}@keyframes p{0%,100%{opacity:.15;transform:scale(.92)}35%{opacity:1;transform:scale(1)}}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <path d="M280 650H1320" stroke="#CFE0FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M280 650H1320" stroke="#0A0A0A" stroke-opacity=".08" stroke-width="2" stroke-dasharray="10 18"/>
+  <rect x="150" y="430" width="280" height="360" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="660" y="350" width="280" height="500" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="1170" y="430" width="280" height="360" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <text x="188" y="520" class="k l">Signup</text><text x="188" y="590" class="k t">Start</text><text x="188" y="642" class="k s">Firm, email, plan</text>
+  <text x="698" y="450" class="k l">Stripe</text><text x="698" y="520" class="k t">Pay</text><text x="698" y="572" class="k s">Plan + checkout</text>
+  <text x="1208" y="520" class="k l">Activate</text><text x="1208" y="590" class="k t">Launch</text><text x="1208" y="642" class="k s">Survey + access live</text>
+  <circle class="dot" cx="280" cy="650" r="14" fill="#0A0A0A"><animate attributeName="cx" values="280;800;1320;280" dur="5.4s" repeatCount="indefinite"/></circle>
+  <circle class="dot" cx="320" cy="698" r="14" fill="#8BB8FF" style="animation-delay:.4s"><animate attributeName="cx" values="320;760;1280;320" dur="5.4s" begin=".6s" repeatCount="indefinite"/></circle>
+  <circle class="dot" cx="360" cy="602" r="14" fill="#90D3C8" style="animation-delay:.8s"><animate attributeName="cx" values="360;840;1240;360" dur="5.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+</svg>

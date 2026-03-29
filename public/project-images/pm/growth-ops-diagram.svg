@@ -1,0 +1,17 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#F5F8FF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="210" y="290" class="k l">Growth Ops</text><text x="210" y="360" class="k t">Scale</text><text x="210" y="412" class="k s">From manual pilots to paid platform delivery</text>
+  <path d="M220 850C500 850 520 720 780 720C1040 720 1090 470 1370 470" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="24" stroke-linecap="round"/>
+  <path d="M220 850C500 850 520 720 780 720C1040 720 1090 470 1370 470" stroke="#A9C7FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="220" cy="850" r="28" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="780" cy="720" r="28" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="1370" cy="470" r="28" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <text x="180" y="930" class="k l">0 Clients</text><text x="710" y="800" class="k l">Pilots</text><text x="1260" y="550" class="k l">Paid Firms</text>
+  <circle cx="220" cy="850" r="14" fill="#0A0A0A"><animate attributeName="cx" values="220;780;1370;220" dur="5.4s" repeatCount="indefinite"/><animate attributeName="cy" values="850;720;470;850" dur="5.4s" repeatCount="indefinite"/></circle>
+</svg>

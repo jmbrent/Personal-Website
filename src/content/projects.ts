@@ -73,9 +73,9 @@ export const projects: Project[] = [
     audience: "Advisors and advisory firms",
     scopeLevel: "External / B2B SaaS",
     coverImage: {
-      src: "/project-images/pm/advisor-onboarding-flow.png",
-      alt: "Finliti advisor onboarding flow diagram.",
-      fit: "contain",
+      src: "/project-images/pm/pulse-launch-diagram.svg",
+      alt: "Animated onboarding diagram showing signup, Stripe, and activation flow.",
+      fit: "cover",
       position: "center",
     },
     relatedProjects: [
@@ -161,8 +161,8 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / B2B SaaS",
     coverImage: {
-      src: "/project-images/pm/dashboard-platform.png",
-      alt: "Finliti advisor dashboard interface.",
+      src: "/project-images/pm/advisor-hub-diagram.svg",
+      alt: "Animated advisor workspace diagram showing integrated platform modules.",
     },
     relatedProjects: [
       "market-alerts-portfolio-signal-system",
@@ -307,8 +307,8 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / Feature prototype",
     coverImage: {
-      src: "/project-images/pm/market-alerts-dashboard.png",
-      alt: "Finliti advisor platform screen used to represent portfolio and alerts work.",
+      src: "/project-images/pm/signal-layer-diagram.svg",
+      alt: "Animated workflow diagram showing portfolio shelves flowing into profile-aware alerts.",
     },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
@@ -379,8 +379,8 @@ export const projects: Project[] = [
     audience: "Advisors and product users",
     scopeLevel: "External / Communications",
     coverImage: {
-      src: "/project-images/pm/lifecycle-newsletter.png",
-      alt: "Finliti newsletter artwork representing lifecycle email and engagement work.",
+      src: "/project-images/pm/message-engine-diagram.svg",
+      alt: "Animated email cadence diagram showing welcome, nurture, and weekly message flow.",
     },
     relatedProjects: [
       "advisor-onboarding-system-transformation",
@@ -442,9 +442,9 @@ export const projects: Project[] = [
     audience: "End users",
     scopeLevel: "External / B2C",
     coverImage: {
-      src: "/project-images/pm/advisor-onboarding-flow.png",
-      alt: "Finliti user journey flow representing the discovery survey funnel.",
-      fit: "contain",
+      src: "/project-images/pm/discovery-flow-diagram.svg",
+      alt: "Animated user flow diagram showing survey, profile reveal, and report path.",
+      fit: "cover",
     },
     relatedProjects: ["lifecycle-email-engagement-system"],
   },
@@ -508,8 +508,8 @@ export const projects: Project[] = [
     audience: "Advisors and enterprise firms",
     scopeLevel: "External / Enterprise / B2B",
     coverImage: {
-      src: "/project-images/pm/rbc-finsec-deck.png",
-      alt: "Finliti enterprise demo deck slide.",
+      src: "/project-images/pm/growth-ops-diagram.svg",
+      alt: "Animated growth diagram showing movement from zero clients to paid pilot firms.",
     },
     relatedProjects: [
       "advisor-onboarding-system-transformation",
@@ -565,9 +565,9 @@ export const projects: Project[] = [
     audience: "Internal team",
     scopeLevel: "Internal",
     coverImage: {
-      src: "/project-images/pm/advisor-onboarding-flow.png",
-      alt: "Workflow diagram representing intern coordination and feature support.",
-      fit: "contain",
+      src: "/project-images/pm/team-flow-diagram.svg",
+      alt: "Animated team coordination diagram showing startup stakeholders and interns in one workflow.",
+      fit: "cover",
     },
     relatedProjects: ["enterprise-rollout-early-client-growth"],
   },
@@ -627,8 +627,8 @@ export const projects: Project[] = [
     audience: "Stakeholders and industry partners",
     scopeLevel: "External / Strategic",
     coverImage: {
-      src: "/project-images/pm/rbc-finsec-deck.png",
-      alt: "Finliti RBC FinSec presentation slide.",
+      src: "/project-images/pm/finsec-track-diagram.svg",
+      alt: "Animated stakeholder diagram showing RBC, banks, and fintech connections.",
     },
     relatedProjects: ["enterprise-rollout-early-client-growth"],
   },
@@ -1289,9 +1289,9 @@ export const projects: Project[] = [
     audience: "Clients and collaborators",
     scopeLevel: "External / Client services",
     coverImage: {
-      src: "/project-images/pm/advisor-onboarding-flow.png",
-      alt: "Workflow diagram representing freelance client project delivery.",
-      fit: "contain",
+      src: "/project-images/pm/client-ops-diagram.svg",
+      alt: "Animated client delivery diagram showing brief, build, and handoff workflow.",
+      fit: "cover",
     },
   },
 ];

@@ -1,0 +1,19 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#F2FBF8"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect x="170" y="360" width="300" height="420" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="650" y="300" width="300" height="540" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="1130" y="360" width="300" height="420" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M470 570H650M950 570H1130" stroke="#A9DDD3" stroke-width="10" stroke-linecap="round"/>
+  <text x="210" y="470" class="k l">Assets</text><text x="210" y="540" class="k t">Shelf</text><text x="210" y="592" class="k s">CSV + tickers</text>
+  <text x="690" y="430" class="k l">Logic</text><text x="690" y="500" class="k t">Map</text><text x="690" y="552" class="k s">Risk + profile signal</text>
+  <text x="1170" y="470" class="k l">Alerts</text><text x="1170" y="540" class="k t">Send</text><text x="1170" y="592" class="k s">Advisor-facing updates</text>
+  <circle cx="470" cy="570" r="13" fill="#0A0A0A"><animate attributeName="cx" values="470;790;1130;470" dur="5.5s" repeatCount="indefinite"/></circle>
+  <circle cx="510" cy="628" r="13" fill="#90D3C8"><animate attributeName="cx" values="510;830;1170;510" dur="5.5s" begin=".7s" repeatCount="indefinite"/></circle>
+  <circle cx="550" cy="512" r="13" fill="#8BB8FF"><animate attributeName="cx" values="550;870;1210;550" dur="5.5s" begin="1.4s" repeatCount="indefinite"/></circle>
+</svg>

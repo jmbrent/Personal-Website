@@ -1,0 +1,16 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200"><stop stop-color="#F7F9FC"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+    <style>
+      .k{font-family:Helvetica,Arial,sans-serif}.l{font-size:22px;letter-spacing:.24em;text-transform:uppercase;fill:#737373;font-weight:700}.t{font-size:58px;letter-spacing:-.04em;fill:#0A0A0A;font-weight:700}.s{font-size:26px;fill:#6B7280}
+    </style>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <text x="220" y="290" class="k l">Client Ops</text><text x="220" y="360" class="k t">Deliver</text><text x="220" y="412" class="k s">Brief, build, handoff</text>
+  <rect x="210" y="520" width="260" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="670" y="520" width="260" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <rect x="1130" y="520" width="260" height="180" fill="#FFF" stroke="#0A0A0A" stroke-opacity=".12" stroke-width="2"/>
+  <text x="248" y="620" class="k l">Brief</text><text x="728" y="620" class="k l">Build</text><text x="1178" y="620" class="k l">Handoff</text>
+  <path d="M470 610H670M930 610H1130" stroke="#D7DFEA" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="470" cy="610" r="12" fill="#0A0A0A"><animate attributeName="cx" values="470;930;470" dur="4.8s" repeatCount="indefinite"/></circle>
+</svg>
