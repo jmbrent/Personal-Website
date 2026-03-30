@@ -1191,6 +1191,12 @@ export const projects: Project[] = [
     industry: "Television / Media",
     audience: "Production teams and audiences",
     scopeLevel: "External / Production",
+    links: [
+      {
+        label: "Watch on HGTV",
+        href: "https://watch.hgtv.com/video/2294932",
+      },
+    ],
   },
   {
     id: "boy-in-bloom-short-film",
@@ -1249,6 +1255,10 @@ export const projects: Project[] = [
     industry: "Film / Media",
     audience: "Festival and film audiences",
     scopeLevel: "External / Production",
+    coverVideo: {
+      src: "https://www.youtube.com/watch?v=Z2mB-0BCS0g&t=47s",
+      title: "Boy In Bloom | A Short Film",
+    },
   },
   {
     id: "freelance-client-project-delivery",
