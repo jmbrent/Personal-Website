@@ -80,6 +80,27 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         ]}
       />
 
+      {project.links?.length ? (
+        <section className="border border-black/10 bg-white p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
+            Links
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {project.links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       {project.galleryImages?.length ? (
         <section className="grid gap-4 md:grid-cols-2">
           {project.galleryImages.map((image) => (

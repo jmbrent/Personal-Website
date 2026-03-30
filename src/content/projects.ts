@@ -1196,6 +1196,10 @@ export const projects: Project[] = [
         label: "Watch on HGTV",
         href: "https://watch.hgtv.com/video/2294932",
       },
+      {
+        label: "View on IMDb",
+        href: "https://www.imdb.com/title/tt9855018/",
+      },
     ],
   },
   {
@@ -1256,9 +1260,19 @@ export const projects: Project[] = [
     audience: "Festival and film audiences",
     scopeLevel: "External / Production",
     coverVideo: {
-      src: "https://www.youtube.com/watch?v=Z2mB-0BCS0g&t=47s",
+      src: "https://www.youtube.com/watch?v=Z2mB-0BCS0g",
       title: "Boy In Bloom | A Short Film",
     },
+    links: [
+      {
+        label: "Watch on YouTube",
+        href: "https://www.youtube.com/watch?v=Z2mB-0BCS0g",
+      },
+      {
+        label: "View on IMDb",
+        href: "https://www.imdb.com/title/tt11826624/",
+      },
+    ],
   },
   {
     id: "freelance-client-project-delivery",
