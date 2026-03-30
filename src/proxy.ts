@@ -7,19 +7,21 @@ import {
   isPreviewProtectionEnabled,
 } from "@/lib/preview-access";
 
-const HOLD_PAGE_PATH = "/under-construction";
-
 const loginPath = getPreviewLoginPath();
+const protectedPaths = new Set(["/creative-content", "/product-ux"]);
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = request.cookies.get(getPreviewAccessCookieName())?.value;
 
   if (
-    pathname === HOLD_PAGE_PATH ||
     pathname === loginPath ||
     pathname.startsWith("/api/preview-access")
   ) {
+    return NextResponse.next();
+  }
+
+  if (!protectedPaths.has(pathname)) {
     return NextResponse.next();
   }
 
@@ -28,7 +30,8 @@ export async function proxy(request: NextRequest) {
   }
 
   const rewriteUrl = request.nextUrl.clone();
-  rewriteUrl.pathname = isPreviewProtectionEnabled() ? HOLD_PAGE_PATH : HOLD_PAGE_PATH;
+  rewriteUrl.pathname = loginPath;
+  rewriteUrl.searchParams.set("redirectTo", pathname);
 
   return NextResponse.rewrite(rewriteUrl);
 }

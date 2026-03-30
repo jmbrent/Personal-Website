@@ -8,14 +8,19 @@ export const metadata: Metadata = {
 };
 
 type PreviewLoginPageProps = {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; redirectTo?: string }>;
 };
 
 export default async function PreviewLoginPage({
   searchParams,
 }: PreviewLoginPageProps) {
-  const { error } = await searchParams;
+  const { error, redirectTo } = await searchParams;
   const isEnabled = isPreviewProtectionEnabled();
+  const nextPath =
+    redirectTo &&
+    (redirectTo === "/creative-content" || redirectTo === "/product-ux")
+      ? redirectTo
+      : "/";
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 items-center px-5 py-16 lg:px-8">
@@ -27,8 +32,7 @@ export default async function PreviewLoginPage({
           Enter password
         </h1>
         <p className="mt-4 text-base leading-7 text-stone-600">
-          This route is only for reviewing the in-progress site before public
-          launch.
+          Enter the password to view the protected section.
         </p>
         {!isEnabled ? (
           <p className="mt-6 border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
@@ -54,7 +58,7 @@ export default async function PreviewLoginPage({
               required
             />
           </label>
-          <input type="hidden" name="redirectTo" value="/" />
+          <input type="hidden" name="redirectTo" value={nextPath} />
           <button
             type="submit"
             className="bg-stone-900 px-6 py-3 text-sm font-medium text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-400"
@@ -65,6 +69,7 @@ export default async function PreviewLoginPage({
         </form>
         <p className="mt-6 text-sm text-stone-500">
           Private route: {getPreviewLoginPath()}
+          {nextPath !== "/" ? ` → ${nextPath}` : ""}
         </p>
       </section>
     </main>

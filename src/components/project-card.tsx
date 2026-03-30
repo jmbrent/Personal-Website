@@ -38,7 +38,12 @@ export function ProjectCard({
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="max-w-3xl">
               <h2 className="text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
-                {project.projectType}
+                <Link
+                  href={`/work/${project.slug}`}
+                  className="transition group-hover:text-stone-700"
+                >
+                  {project.projectType}
+                </Link>
               </h2>
               <div className="mt-2 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
                 <span>{project.company}</span>
@@ -106,7 +111,12 @@ export function ProjectCard({
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="max-w-2xl">
             <h2 className="text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.04em] text-black">
-              {project.projectType}
+              <Link
+                href={`/work/${project.slug}`}
+                className="transition group-hover:text-stone-700"
+              >
+                {project.projectType}
+              </Link>
             </h2>
             <div className="mt-2 flex flex-wrap items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-500">
               <span>{project.company}</span>
