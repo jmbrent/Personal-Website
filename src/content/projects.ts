@@ -923,10 +923,9 @@ export const projects: Project[] = [
     industry: "Creative / Commercial",
     audience: "Prospects, users, and stakeholders",
     scopeLevel: "External / Contract",
-    coverImage: {
-      src: "/project-images/creative/scalepoynt-badge.png",
-      alt: "ScalePoynt brand badge.",
-      fit: "contain",
+    coverVideo: {
+      src: "https://www.youtube.com/watch?v=SnujwfivhBc&t=2s",
+      title: "ScalePoynt cover reel",
     },
   },
   {
@@ -1133,10 +1132,9 @@ export const projects: Project[] = [
     industry: "Film / TV Development",
     audience: "Development partners and future audiences",
     scopeLevel: "External / Development",
-    coverImage: {
-      src: "/project-images/film/finding-green.gif",
-      alt: "Finding Green animated still.",
-      fit: "cover",
+    coverVideo: {
+      src: "https://www.youtube.com/watch?v=8UY056BMFb4&t=6s",
+      title: "Finding Green development trailer",
     },
   },
   {
@@ -1401,6 +1399,50 @@ export const projects: Project[] = [
     industry: "Documentary / Media",
     audience: "Production and editorial teams",
     scopeLevel: "External / Research",
+  },
+  {
+    id: "toronto-urban-growers-urban-ag-week",
+    slug: "toronto-urban-growers-urban-ag-week",
+    title: "Toronto Urban Growers Storytelling",
+    shortTitle: "TUG Urban Ag Week",
+    category: "Creative / Content",
+    projectType: "Video / Community Storytelling",
+    company: "Toronto Urban Growers",
+    role: "Director / Editor",
+    location: "Toronto, ON",
+    timelineStart: "2021-09",
+    timelineEnd: "2021-09",
+    status: "Launched",
+    oneLineSummary:
+      "Created a short community-storytelling video for Thorncliffe Park Urban Farmers as part of TUG Urban Ag Week 2021.",
+    shortResumeVersion:
+      "Created a short community-storytelling video for Thorncliffe Park Urban Farmers during TUG Urban Ag Week 2021.",
+    longResumeVersion:
+      "Produced a short-form community storytelling piece focused on Thorncliffe Park Urban Farmers for Toronto Urban Growers' Urban Ag Week 2021 programming.",
+    context:
+      "The work needed to spotlight community-led urban agriculture in a concise, accessible format tied to a public-facing event context.",
+    objective:
+      "Create a clear, human-centered video piece that could support community visibility and event storytelling.",
+    ownership: ["Direction", "Editing", "Story shaping"],
+    deliverables: ["Short-form video", "Community-storytelling edit", "Event-facing media asset"],
+    collaborators: ["Toronto Urban Growers", "Thorncliffe Park Urban Farmers"],
+    skills: ["Video editing", "Storytelling", "Community-focused content"],
+    tools: ["Video production", "Editing workflows"],
+    outcomes: ["Delivered a published Urban Ag Week 2021 video asset"],
+    metrics: [
+      { label: "Program", value: "Urban Ag Week 2021" },
+      { label: "Format", value: "Community video" },
+      { label: "Org", value: "Toronto Urban Growers" },
+    ],
+    tags: ["Creative / Content", "Video", "Community storytelling", "Toronto Urban Growers"],
+    featured: false,
+    industry: "Community / Nonprofit / Media",
+    audience: "Public audiences and community stakeholders",
+    scopeLevel: "External / Community storytelling",
+    coverVideo: {
+      src: "https://vimeo.com/593368341?fl=pl&fe=cm",
+      title: "Thorncliffe Park Urban Farmers - Drawdown Toronto - TUG Urban Ag Week 2021",
+    },
   },
   {
     id: "royal-lepage-executive-assistant",

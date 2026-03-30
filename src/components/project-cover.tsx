@@ -25,6 +25,49 @@ export function ProjectCover({
   priority = false,
 }: ProjectCoverProps) {
   const image = project.coverImage;
+  const video = project.coverVideo;
+
+  if (video) {
+    let embedUrl = video.src;
+
+    try {
+      const parsed = new URL(video.src);
+
+      if (parsed.hostname.includes("youtube.com") || parsed.hostname.includes("youtu.be")) {
+        const id =
+          parsed.hostname.includes("youtu.be")
+            ? parsed.pathname.replace("/", "")
+            : parsed.searchParams.get("v");
+
+        if (id) {
+          embedUrl =
+            `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${id}&playsinline=1&rel=0&modestbranding=1`;
+        }
+      }
+
+      if (parsed.hostname.includes("vimeo.com")) {
+        const id = parsed.pathname.split("/").filter(Boolean)[0];
+
+        if (id) {
+          embedUrl =
+            `https://player.vimeo.com/video/${id}?background=1&autoplay=1&loop=1&muted=1&autopause=0`;
+        }
+      }
+    } catch {}
+
+    return (
+      <div className={`relative overflow-hidden border border-black/10 bg-stone-100 ${className}`}>
+        <iframe
+          src={embedUrl}
+          title={video.title}
+          className="absolute inset-0 h-full w-full"
+          allow="autoplay; fullscreen; picture-in-picture"
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
+      </div>
+    );
+  }
 
   if (!image) {
     return (

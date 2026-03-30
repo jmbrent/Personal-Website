@@ -22,6 +22,11 @@ export type ProjectImage = {
   position?: string;
 };
 
+export type ProjectVideo = {
+  src: string;
+  title: string;
+};
+
 export type Project = {
   id: string;
   slug: string;
@@ -55,6 +60,7 @@ export type Project = {
   audience: string;
   scopeLevel: string;
   coverImage?: ProjectImage;
+  coverVideo?: ProjectVideo;
   galleryImages?: ProjectImage[];
   links?: ProjectLink[];
   relatedProjects?: string[];
