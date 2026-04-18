@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jonathanbrent.com"),
+  metadataBase: getSiteUrl(),
   title: {
     default: "Jonathan Brent | Portfolio Resume Archive",
     template: "%s | Jonathan Brent",

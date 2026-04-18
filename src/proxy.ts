@@ -25,7 +25,11 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (isPreviewProtectionEnabled() && (await hasValidPreviewAccess(token))) {
+  if (!isPreviewProtectionEnabled()) {
+    return NextResponse.next();
+  }
+
+  if (await hasValidPreviewAccess(token)) {
     return NextResponse.next();
   }
 

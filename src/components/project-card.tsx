@@ -29,7 +29,9 @@ export function ProjectCard({
         className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
       >
         <article className="grid gap-5 border border-black/10 bg-white p-5 transition hover:border-black md:grid-cols-[18rem_minmax(0,1fr)] md:items-start md:gap-6">
-          <ProjectCover project={project} className="aspect-[4/3] md:sticky md:top-28" />
+          <div className="md:sticky md:top-28">
+            <ProjectCover project={project} className="aspect-[4/3]" />
+          </div>
           <div className="flex flex-1 flex-col gap-5">
             <p className="text-[11px] uppercase tracking-[0.14em] text-stone-500 transition group-hover:text-stone-700">
               {displayTitle}

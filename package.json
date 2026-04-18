@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:preview": "SITE_URL=http://jonathanbrent.ca:3100 next dev -p 3100",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "open:preview": "open -na \"Google Chrome\" --args --host-resolver-rules=\"MAP jonathanbrent.ca 127.0.0.1,MAP www.jonathanbrent.ca 127.0.0.1\" --new-window http://jonathanbrent.ca:3100"
   },
   "dependencies": {
     "next": "16.2.1",
