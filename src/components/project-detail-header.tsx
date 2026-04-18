@@ -1,5 +1,6 @@
+import { ProjectDevicePreview } from "@/components/project-device-preview";
 import { ProjectCover } from "@/components/project-cover";
-import { getProjectTimelineLabel } from "@/lib/projects";
+import { getProjectTimelineLabel, isProductProject } from "@/lib/projects";
 import { Project } from "@/types/projects";
 
 type ProjectDetailHeaderProps = {
@@ -72,7 +73,11 @@ export function ProjectDetailHeader({ project }: ProjectDetailHeaderProps) {
           </dd>
         </div>
       </dl>
-      <ProjectCover project={project} priority className="mt-8 aspect-[16/8]" />
+      {isProductProject(project) ? (
+        <ProjectDevicePreview project={project} className="mt-8" />
+      ) : (
+        <ProjectCover project={project} priority className="mt-8 aspect-[16/8]" />
+      )}
     </section>
   );
 }

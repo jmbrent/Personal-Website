@@ -45,19 +45,19 @@ function MockupFrame({
   return (
     <figure className="grid gap-3">
       <div
-        className={`overflow-hidden border border-black/10 bg-stone-950 shadow-[0_24px_60px_rgba(24,20,12,0.12)] ${
+        className={`overflow-hidden border border-stone-200 bg-[#ebe8e2] shadow-[0_24px_60px_rgba(24,20,12,0.1)] ${
           isMobile ? "rounded-[2rem] p-2.5" : "rounded-[1.5rem] p-3"
         }`}
       >
         {isMobile ? (
           <div className="mb-2 flex justify-center">
-            <div className="h-1.5 w-20 rounded-full bg-white/15" />
+            <div className="h-1.5 w-20 rounded-full bg-stone-500/25" />
           </div>
         ) : (
           <div className="mb-3 flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-300/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-200/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/70" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#efb0a6]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#efd49a]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#b9d8ba]" />
           </div>
         )}
         <div
