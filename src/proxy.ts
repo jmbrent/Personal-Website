@@ -8,7 +8,7 @@ import {
 } from "@/lib/preview-access";
 
 const loginPath = getPreviewLoginPath();
-const protectedPaths = new Set(["/creative-content", "/product-ux"]);
+const protectedPaths = new Set(["/creative-content", "/product-ux", "/resume"]);
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

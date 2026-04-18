@@ -10,34 +10,34 @@ export const metadata = {
 
 const productSignals = [
   {
+    label: "App surfaces",
+    value: "7+ connected product modules",
+  },
+  {
     label: "Advisor rollout",
     value: "~10 advisors across ~4 firms",
   },
   {
-    label: "Discovery reach",
-    value: "1,000+ survey completions",
-  },
-  {
-    label: "Lifecycle engagement",
-    value: "~42% open rate",
+    label: "Interface context",
+    value: "Dashboards, profiles, alerts, onboarding",
   },
 ];
 
 const approachAreas = [
   {
-    title: "Systems over screens",
+    title: "App-first case studies",
     description:
-      "The strongest work sits where interface changes also remove manual setup, clarify platform logic, and improve rollout readiness.",
+      "The strongest work is not abstract product thinking. It is app structure, dashboard logic, onboarding flow, and interface decisions tied to actual user movement.",
   },
   {
-    title: "Adoption-minded design",
+    title: "UI tied to real workflow",
     description:
-      "Most projects blend onboarding, product structure, and communication so new features are easier to understand and actually get used.",
+      "Most screens only mattered if they also reduced operational friction, clarified next steps, or helped advisors actually use the platform more effectively.",
   },
   {
-    title: "Cross-functional execution",
+    title: "Product design in live delivery",
     description:
-      "The work spans product thinking, research, UX, implementation support, and startup delivery inside small teams with limited formal process.",
+      "This work happened inside startup conditions where interface design, feature scoping, rollout support, and product communication were tightly connected.",
   },
 ];
 
@@ -184,13 +184,14 @@ export default function ProductUxPage() {
               Product / UX
             </p>
             <h1 className="mt-5 max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[0.96] tracking-[-0.06em] text-stone-950 sm:text-5xl lg:text-[4.4rem]">
-              Designing product systems people can actually move through.
+              App-focused product case studies built around workflow clarity.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-              This work spans onboarding, dashboard structure, research, survey
-              flows, and rollout support. The throughline is reducing friction:
-              fewer manual steps, clearer interfaces, stronger adoption, and
-              product decisions that hold up once real users hit them.
+              This section now leans harder into the product itself: platform
+              structure, dashboard surfaces, onboarding flow, client-profile
+              views, alert systems, and the interface decisions behind them.
+              The aim is a more standard UX/UI portfolio read, not just a list
+              of adjacent product responsibilities.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -250,12 +251,13 @@ export default function ProductUxPage() {
             Selected Case Studies
           </p>
           <h2 className="text-3xl font-semibold tracking-[-0.05em] text-stone-950 sm:text-4xl">
-            Product systems work with the clearest UX impact.
+            App and workflow case studies with the clearest UI impact.
           </h2>
           <p className="max-w-3xl text-base leading-7 text-stone-600">
             Most of the strongest product work happened inside Finliti, where
-            UX, implementation, onboarding, and platform structure were tightly
-            connected instead of handed off across siloed teams.
+            interface structure, onboarding, data surfaces, and rollout logic
+            all had to live inside one evolving app instead of being split
+            across separate teams.
           </p>
         </div>
         <div className="grid gap-6">
@@ -275,12 +277,12 @@ export default function ProductUxPage() {
             Broader Product Work
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-stone-950">
-            Research, contract design support, and adjacent product thinking.
+            Research, contract product design, and adjacent product work.
           </h2>
           <p className="mt-4 text-base leading-8 text-stone-600">
-            The archive also includes dedicated UX roles, research work, and
-            adjacent product projects that sharpened how I approach audience
-            insight, interface clarity, and startup strategy.
+            The archive also includes dedicated UX roles and research work that
+            sharpened how I think about user needs, interface clarity, and
+            product direction beyond the Finliti app itself.
           </p>
           <div className="mt-6 grid gap-3">
             <div className="rounded-[1.3rem] border border-black/10 bg-white px-4 py-4">

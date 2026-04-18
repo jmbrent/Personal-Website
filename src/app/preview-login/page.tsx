@@ -18,7 +18,11 @@ export default async function PreviewLoginPage({
   const isEnabled = isPreviewProtectionEnabled();
   const nextPath =
     redirectTo &&
-    (redirectTo === "/creative-content" || redirectTo === "/product-ux")
+    (
+      redirectTo === "/creative-content" ||
+      redirectTo === "/product-ux" ||
+      redirectTo === "/resume"
+    )
       ? redirectTo
       : "/";
 

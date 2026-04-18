@@ -37,6 +37,10 @@ export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);
 }
 
+export function isProductProject(project: Project) {
+  return projectMatchesCategory(project, "Product / UX");
+}
+
 export function getProjectTimelineLabel(
   timelineStart: string,
   timelineEnd: string,

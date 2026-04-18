@@ -161,8 +161,31 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / B2B SaaS",
     coverImage: {
-      src: "/project-images/pm/advisor-hub-diagram.svg",
-      alt: "Animated advisor workspace diagram showing integrated platform modules.",
+      src: "/project-images/pm/dashboard-platform.png",
+      alt: "Finliti advisor dashboard showing client management inside the platform.",
+      position: "center top",
+    },
+    uiGallery: {
+      desktop: [
+        {
+          src: "/project-images/pm/dashboard-platform.png",
+          alt: "Advisor dashboard showing client management and the primary platform navigation.",
+          caption: "Client-management dashboard inside the advisor platform.",
+          position: "center top",
+        },
+        {
+          src: "/project-images/pm/crm-dashboard.png",
+          alt: "Profile view showing client metrics, personality traits, and insights.",
+          caption: "Client profile screen with behavioral profile context.",
+          position: "center top",
+        },
+        {
+          src: "/project-images/pm/market-alerts-dashboard.png",
+          alt: "Advisor recommendations and investment guidance screen within the platform.",
+          caption: "Investment recommendations and guidance surfaced in-app.",
+          position: "center top",
+        },
+      ],
     },
     relatedProjects: [
       "market-alerts-portfolio-signal-system",
@@ -233,9 +256,26 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / Integration",
     coverImage: {
-      src: "/project-images/pm/profile-sync-diagram.svg",
-      alt: "Animated workflow diagram showing behavioral profile data moving from Profile to Pulse to CRM.",
+      src: "/project-images/pm/crm-dashboard.png",
+      alt: "Client profile screen showing behavioral traits and CRM-relevant profile data.",
       fit: "cover",
+      position: "center top",
+    },
+    uiGallery: {
+      desktop: [
+        {
+          src: "/project-images/pm/crm-dashboard.png",
+          alt: "Client profile view with behavioral-trait scores and account details.",
+          caption: "Behavioral profile data surfaced in a client record view.",
+          position: "center top",
+        },
+        {
+          src: "/project-images/pm/market-alerts-dashboard.png",
+          alt: "Recommendation view using profile information to guide investment suggestions.",
+          caption: "Recommendations and planning guidance connected back to profile context.",
+          position: "center top",
+        },
+      ],
     },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",
@@ -307,8 +347,25 @@ export const projects: Project[] = [
     audience: "Advisors",
     scopeLevel: "External / Feature prototype",
     coverImage: {
-      src: "/project-images/pm/signal-layer-diagram.svg",
-      alt: "Animated workflow diagram showing portfolio shelves flowing into profile-aware alerts.",
+      src: "/project-images/pm/market-alerts-dashboard.png",
+      alt: "Recommendation and guidance screen inside the advisor platform.",
+      position: "center top",
+    },
+    uiGallery: {
+      desktop: [
+        {
+          src: "/project-images/pm/market-alerts-dashboard.png",
+          alt: "In-app recommendations view showing investment strategies and planning guidance.",
+          caption: "Signal and recommendations layer inside the advisor app.",
+          position: "center top",
+        },
+        {
+          src: "/project-images/pm/crm-dashboard.png",
+          alt: "Client context screen that informs downstream alert and recommendation logic.",
+          caption: "Profile context that informs downstream alerts and suggestions.",
+          position: "center top",
+        },
+      ],
     },
     relatedProjects: [
       "advisor-dashboard-platform-expansion",

@@ -18,6 +18,7 @@ export type ProjectLink = {
 export type ProjectImage = {
   src: string;
   alt: string;
+  caption?: string;
   fit?: "cover" | "contain";
   position?: string;
 };
@@ -62,6 +63,10 @@ export type Project = {
   coverImage?: ProjectImage;
   coverVideo?: ProjectVideo;
   galleryImages?: ProjectImage[];
+  uiGallery?: {
+    mobile?: ProjectImage[];
+    desktop?: ProjectImage[];
+  };
   links?: ProjectLink[];
   relatedProjects?: string[];
 };
