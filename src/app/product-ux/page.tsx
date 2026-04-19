@@ -164,11 +164,10 @@ export default function ProductUxPage() {
           </p>
         </div>
         <div className="grid gap-6">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <FeaturedProductCard
               key={project.id}
               project={project}
-              priority={index === 0}
             />
           ))}
         </div>
