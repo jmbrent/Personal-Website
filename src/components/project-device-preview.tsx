@@ -51,7 +51,7 @@ export function ProjectDevicePreview({
             <span className="h-2.5 w-2.5 rounded-full bg-[#efd49a]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#b9d8ba]" />
           </div>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[1rem] border border-stone-200 bg-white">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-[1rem] border border-stone-200 bg-[#f8f6f2]">
             <DeviceImage image={desktopImage} alt={desktopImage.alt} />
           </div>
         </div>
@@ -61,7 +61,7 @@ export function ProjectDevicePreview({
             <div className="mb-2 flex justify-center">
               <div className="h-1.5 w-16 rounded-full bg-stone-500/25" />
             </div>
-            <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.35rem] border border-stone-200 bg-white">
+            <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.35rem] border border-stone-200 bg-[#f8f6f2]">
               <DeviceImage image={mobileImage} alt={mobileImage.alt} />
             </div>
           </div>

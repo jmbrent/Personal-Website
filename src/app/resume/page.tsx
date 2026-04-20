@@ -267,7 +267,7 @@ function ResumeExperienceCard({
                 <Link
                   key={project.id}
                   href={`/work/${project.slug}`}
-                  className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+                  className="site-button site-button--secondary site-button--compact"
                 >
                   {project.title}
                 </Link>
@@ -315,10 +315,10 @@ export default function ResumePage() {
                   download={link.download}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noreferrer" : undefined}
-                  className={`rounded-full px-5 py-3 text-sm font-medium transition ${
+                  className={`site-button ${ 
                     link.primary
-                      ? "bg-stone-950 text-stone-50 hover:bg-stone-800"
-                      : "border border-black/10 bg-white/80 text-stone-700 hover:border-black hover:text-black"
+                      ? "site-button--primary"
+                      : "site-button--secondary"
                   }`}
                 >
                   {link.label}

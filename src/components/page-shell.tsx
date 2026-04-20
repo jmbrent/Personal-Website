@@ -50,13 +50,13 @@ export function PageShell({
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/project-management"
-              className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white transition hover:bg-stone-800"
+              className="site-button site-button--primary"
             >
               Open project archive
             </Link>
             <Link
               href="/resume"
-              className="rounded-full border border-black/10 px-5 py-3 text-sm font-medium text-stone-700 transition hover:border-black hover:text-black"
+              className="site-button site-button--secondary"
             >
               Open resume
             </Link>

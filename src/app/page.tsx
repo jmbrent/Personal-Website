@@ -65,7 +65,7 @@ export default function HomePage() {
                       ? "/creative-content"
                       : "/film-production"
               }
-              className={`border border-black/10 px-4 py-3 text-sm text-black transition hover:border-black ${categoryStyles[category]}`}
+              className={`site-button site-button--secondary site-button--compact w-full justify-center ${categoryStyles[category]}`}
             >
               {category}
             </Link>
@@ -97,7 +97,7 @@ export default function HomePage() {
                           ? "/creative-content"
                           : "/film-production"
                   }
-                  className="border border-black px-3 py-2 text-sm text-black transition hover:bg-black hover:!text-white focus:bg-black focus:!text-white active:bg-black active:!text-white"
+                  className="site-button site-button--primary site-button--compact"
                 >
                   Open
                 </Link>

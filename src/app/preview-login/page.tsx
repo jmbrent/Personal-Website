@@ -65,7 +65,7 @@ export default async function PreviewLoginPage({
           <input type="hidden" name="redirectTo" value={nextPath} />
           <button
             type="submit"
-            className="bg-stone-900 px-6 py-3 text-sm font-medium text-stone-50 transition hover:bg-stone-700 disabled:cursor-not-allowed disabled:bg-stone-400"
+            className="site-button site-button--primary w-fit disabled:cursor-not-allowed"
             disabled={!isEnabled}
           >
             Unlock preview

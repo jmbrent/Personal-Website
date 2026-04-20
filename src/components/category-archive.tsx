@@ -59,23 +59,23 @@ export function CategoryArchive({
             ) : null}
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex border border-black/10 bg-white">
+            <div className="flex flex-wrap gap-2">
               <Link
                 href={buildViewHref("list")}
-                className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
+                className={`site-button site-button--compact ${
                   view === "list"
-                    ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
-                    : "text-stone-600 hover:text-black focus:text-black active:text-black"
+                    ? "site-button--primary"
+                    : "site-button--secondary"
                 }`}
               >
                 List
               </Link>
               <Link
                 href={buildViewHref("grid")}
-                className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
+                className={`site-button site-button--compact ${
                   view === "grid"
-                    ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
-                    : "text-stone-600 hover:text-black focus:text-black active:text-black"
+                    ? "site-button--primary"
+                    : "site-button--secondary"
                 }`}
               >
                 Grid
@@ -84,7 +84,7 @@ export function CategoryArchive({
             {linkHref && linkLabel ? (
               <Link
                 href={linkHref}
-                className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:!text-white focus:bg-black focus:!text-white active:bg-black active:!text-white"
+                className="site-button site-button--primary site-button--compact"
               >
                 {linkLabel}
               </Link>

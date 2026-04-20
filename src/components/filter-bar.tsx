@@ -41,10 +41,10 @@ export function FilterBar({
             <button
               type="button"
               onClick={() => onChange("projectType", "")}
-              className={`border px-4 py-2 text-sm transition ${
+              className={`site-button site-button--compact ${
                 values.projectType
-                  ? "border-black/10 text-stone-600 hover:border-black"
-                  : "border-black bg-black !text-white hover:!text-white focus:!text-white active:!text-white"
+                  ? "site-button--secondary"
+                  : "site-button--primary"
               }`}
             >
               All
@@ -56,10 +56,10 @@ export function FilterBar({
                 onClick={() =>
                   onChange("projectType", values.projectType === item ? "" : item)
                 }
-                className={`border px-4 py-2 text-sm transition ${
+                className={`site-button site-button--compact ${
                   values.projectType === item
-                    ? "border-black bg-black !text-white hover:!text-white focus:!text-white active:!text-white"
-                    : "border-black/10 text-stone-600 hover:border-black hover:text-black"
+                    ? "site-button--primary"
+                    : "site-button--secondary"
                 }`}
               >
                 {item}
@@ -67,23 +67,23 @@ export function FilterBar({
             ))}
           </div>
         </div>
-        <div className="flex border border-black/10">
+        <div className="flex flex-wrap gap-2">
           <Link
             href={buildViewHref("list")}
-            className={`inline-flex items-center justify-center px-4 py-2 text-sm transition ${
+            className={`site-button site-button--compact ${
               values.view === "list"
-                ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
-                : "text-stone-600 hover:text-black focus:text-black active:text-black"
+                ? "site-button--primary"
+                : "site-button--secondary"
             }`}
           >
             List
           </Link>
           <Link
             href={buildViewHref("grid")}
-            className={`inline-flex items-center justify-center border-l border-black/10 px-4 py-2 text-sm transition ${
+            className={`site-button site-button--compact ${
               values.view === "grid"
-                ? "bg-black !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white"
-                : "text-stone-600 hover:text-black focus:text-black active:text-black"
+                ? "site-button--primary"
+                : "site-button--secondary"
             }`}
           >
             Grid

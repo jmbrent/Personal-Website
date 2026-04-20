@@ -2,43 +2,12 @@ import Image from "next/image";
 
 import { Project, ProjectImage } from "@/types/projects";
 
-const MOBILE_SLOT_COUNT = 3;
-const DESKTOP_SLOT_COUNT = 3;
-
-function createSlots(images: ProjectImage[] | undefined, count: number) {
-  return Array.from({ length: count }, (_, index) => images?.[index] ?? null);
-}
-
-function MockupPlaceholder({
-  device,
-  index,
-}: {
-  device: "mobile" | "desktop";
-  index: number;
-}) {
-  const label = `${device === "mobile" ? "Mobile" : "Desktop"} mockup ${String(index + 1).padStart(2, "0")}`;
-
-  return (
-    <div className="flex h-full flex-col items-center justify-center border border-dashed border-stone-300 bg-[linear-gradient(180deg,rgba(250,250,249,0.94),rgba(245,245,244,0.8))] px-5 text-center text-stone-500">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-400">
-        {device}
-      </p>
-      <p className="mt-3 max-w-[14rem] text-sm leading-6">{label}</p>
-      <p className="mt-2 max-w-[14rem] text-xs leading-5 text-stone-400">
-        Replace this slot with a polished UI mockup or screenshot.
-      </p>
-    </div>
-  );
-}
-
 function MockupFrame({
   device,
   image,
-  index,
 }: {
   device: "mobile" | "desktop";
-  image: ProjectImage | null;
-  index: number;
+  image: ProjectImage;
 }) {
   const isMobile = device === "mobile";
 
@@ -61,49 +30,44 @@ function MockupFrame({
           </div>
         )}
         <div
-          className={`relative overflow-hidden bg-white ${
-            isMobile ? "aspect-[9/19.5] rounded-[1.4rem]" : "aspect-[16/10] rounded-[1rem]"
+          className={`relative overflow-hidden bg-[#f8f6f2] ${
+            isMobile ? "aspect-[9/19.5] rounded-[1.4rem]" : "aspect-[16/9] rounded-[1rem]"
           }`}
         >
-          {image ? (
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes={
-                isMobile
-                  ? "(min-width: 1024px) 18vw, (min-width: 640px) 28vw, 85vw"
-                  : "(min-width: 1024px) 30vw, 100vw"
-              }
-              className="object-cover"
-              style={{
-                objectFit: image.fit ?? "cover",
-                objectPosition: image.position ?? "center",
-              }}
-              unoptimized={
-                image.src.endsWith(".gif") || image.src.endsWith(".svg")
-              }
-            />
-          ) : (
-            <MockupPlaceholder device={device} index={index} />
-          )}
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes={
+              isMobile
+                ? "(min-width: 1024px) 18vw, (min-width: 640px) 28vw, 85vw"
+                : "(min-width: 1024px) 30vw, 100vw"
+            }
+            className="object-cover"
+            style={{
+              objectFit: image.fit ?? "cover",
+              objectPosition: image.position ?? "center",
+            }}
+            unoptimized={
+              image.src.endsWith(".gif") || image.src.endsWith(".svg")
+            }
+          />
         </div>
       </div>
       <figcaption className="text-sm leading-6 text-stone-600">
-        {image?.caption ??
-          image?.alt ??
-          `${isMobile ? "Mobile" : "Desktop"} mockup ${index + 1}`}
+        {image.caption ?? image.alt}
       </figcaption>
     </figure>
   );
 }
 
 export function ProjectUiGallery({ project }: { project: Project }) {
-  const mobileSlots = createSlots(project.uiGallery?.mobile, MOBILE_SLOT_COUNT);
-  const desktopSlots = createSlots(
-    project.uiGallery?.desktop,
-    DESKTOP_SLOT_COUNT,
-  );
+  const mobileImages = project.uiGallery?.mobile ?? [];
+  const desktopImages = project.uiGallery?.desktop ?? [];
+
+  if (!mobileImages.length && !desktopImages.length) {
+    return null;
+  }
 
   return (
     <section
@@ -118,54 +82,45 @@ export function ProjectUiGallery({ project }: { project: Project }) {
           App screens and polished device views for this case study.
         </h2>
         <p className="mt-4 text-base leading-8 text-stone-600">
-          Each product entry now has dedicated slots for three mobile mockups
-          and three desktop mockups, so you can build out a more standard
-          UX/UI portfolio presentation as final screens become available.
+          A focused set of product screens showing the core workflow surfaces
+          behind this case study.
         </p>
       </div>
 
       <div className="mt-8 grid gap-10">
-        <div>
-          <div className="flex items-center justify-between gap-4">
+        {mobileImages.length ? (
+          <div>
             <h3 className="text-xl font-semibold tracking-[-0.03em] text-stone-950">
               Mobile
             </h3>
-            <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
-              3 slots
-            </p>
+            <div className="mt-4 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+              {mobileImages.map((image) => (
+                <MockupFrame
+                  key={image.src}
+                  device="mobile"
+                  image={image}
+                />
+              ))}
+            </div>
           </div>
-          <div className="mt-4 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {mobileSlots.map((image, index) => (
-              <MockupFrame
-                key={`mobile-${index}`}
-                device="mobile"
-                image={image}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
+        ) : null}
 
-        <div>
-          <div className="flex items-center justify-between gap-4">
+        {desktopImages.length ? (
+          <div>
             <h3 className="text-xl font-semibold tracking-[-0.03em] text-stone-950">
               Desktop
             </h3>
-            <p className="text-xs uppercase tracking-[0.18em] text-stone-500">
-              3 slots
-            </p>
+            <div className="mt-4 grid gap-5 xl:grid-cols-3">
+              {desktopImages.map((image) => (
+                <MockupFrame
+                  key={image.src}
+                  device="desktop"
+                  image={image}
+                />
+              ))}
+            </div>
           </div>
-          <div className="mt-4 grid gap-5 xl:grid-cols-3">
-            {desktopSlots.map((image, index) => (
-              <MockupFrame
-                key={`desktop-${index}`}
-                device="desktop"
-                image={image}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
+        ) : null}
       </div>
     </section>
   );

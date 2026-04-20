@@ -55,7 +55,7 @@ function ProjectLinksSection({ project }: { project: Project }) {
             href={link.href}
             target="_blank"
             rel="noreferrer"
-            className="border border-black px-4 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+            className="site-button site-button--secondary site-button--compact"
           >
             {link.label}
           </Link>
@@ -87,7 +87,7 @@ function StandardProjectPage({
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 py-12 lg:px-8 lg:py-16">
       <Link
         href="/"
-        className="inline-flex w-fit border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+        className="site-button site-button--secondary site-button--compact w-fit"
       >
         Back to work
       </Link>
@@ -143,7 +143,7 @@ function StandardProjectPage({
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+                  className="site-button site-button--secondary site-button--compact justify-start"
                 >
                   {section.label}
                 </a>
@@ -322,7 +322,7 @@ function ProductCaseStudyPage({
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-8 px-5 py-12 lg:px-8 lg:py-16">
       <Link
         href="/product-ux"
-        className="inline-flex w-fit border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+        className="site-button site-button--secondary site-button--compact w-fit"
       >
         Back to Product / UX
       </Link>
@@ -354,7 +354,7 @@ function ProductCaseStudyPage({
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="rounded-[0.9rem] border border-black/10 px-4 py-2 text-sm text-stone-700 transition hover:border-black hover:text-black"
+                  className="site-button site-button--secondary site-button--compact justify-start"
                 >
                   {section.label}
                 </a>
