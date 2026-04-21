@@ -8,17 +8,23 @@ const contactMethods = [
   {
     label: "Email",
     value: "jonbrentcreative@gmail.com",
+    href: "mailto:jonbrentcreative@gmail.com",
     note: "Best direct contact for now.",
+    external: false,
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/jonathanmbrent",
+    href: "https://www.linkedin.com/in/jonathanmbrent/",
     note: "Professional profile and background.",
+    external: true,
   },
   {
     label: "IMDb",
     value: "imdb.com/name/nm6025350",
+    href: "https://www.imdb.com/name/nm6025350/",
     note: "Film and production credits.",
+    external: true,
   },
 ];
 
@@ -39,7 +45,14 @@ export default function ContactPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone-500">
               {item.label}
             </p>
-            <p className="mt-4 text-xl font-semibold text-stone-950">{item.value}</p>
+            <a
+              href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noreferrer" : undefined}
+              className="mt-4 inline-flex text-xl font-semibold text-stone-950 transition hover:text-stone-700"
+            >
+              {item.value}
+            </a>
             <p className="mt-3 text-sm leading-6 text-stone-600">{item.note}</p>
           </article>
         ))}

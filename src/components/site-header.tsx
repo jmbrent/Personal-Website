@@ -4,14 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "Work" },
+  { href: "/work", label: "Work" },
   { href: "/contact", label: "Start a Project" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const workPaths = [
-    "/",
     "/work",
     "/project-management",
     "/product-ux",
@@ -35,9 +34,9 @@ export function SiteHeader() {
           <ul className="flex min-w-max gap-5 pb-1">
             {navItems.map((item) => {
               const isActive =
-                item.href === "/"
+                item.href === "/work"
                   ? workPaths.some((path) =>
-                      path === "/" ? pathname === path : pathname.startsWith(path),
+                      pathname === path || pathname.startsWith(`${path}/`),
                     )
                   : pathname.startsWith(item.href);
 
